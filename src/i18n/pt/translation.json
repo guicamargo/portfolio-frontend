@@ -1,5 +1,18 @@
 {
-    "greeting": "Olá, Mundo!",
-    "changeLanguage": "Mudar Idioma",
-    "toggleTheme": "Alternar Tema"
+  "greeting": "Olá!",
+  "toggleTheme": "Alternar Tema",
+  "nav": {
+    "home": "Início",
+    "dashboard": "Painel",
+    "aiml": "IA & AM",
+    "logout": "Sair"
+  },
+  "aiml": {
+    "title": "Inteligência Artificial & Aprendizado de Máquina",
+    "section1": {
+      "title": "Introdução",
+      "content": "Explore o mundo da IA e do Aprendizado de Máquina"
+    }
   }
+  
+}

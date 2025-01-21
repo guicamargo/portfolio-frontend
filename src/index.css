@@ -23,3 +23,89 @@ button {
 button:hover {
   opacity: 0.8;
 }
+/* src/index.css */
+.app-wrapper {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem;
+}
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ai-ml-container {
+  padding: 2rem;
+}
+
+.ai-ml-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* src/index.css */
+/* ... outros estilos ... */
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header-controls button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dark .header-controls button {
+  background: #333;
+  color: white;
+  border-color: #666;
+}
+
+.header-controls button:hover {
+  opacity: 0.8;
+}
+
+/* Estilos para o tema escuro */
+.dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.dark .header {
+  background-color: #2d2d2d;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.dark a {
+  color: #fff;
+}
+
+.dark select {
+  background-color: #333;
+  color: white;
+  border-color: #666;
+}

@@ -1,0 +1,18 @@
+.theme-toggle-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .dark .theme-toggle-btn {
+    background: #333;
+    color: white;
+    border-color: #666;
+  }
+  
+  .theme-toggle-btn:hover {
+    opacity: 0.8;
+  }

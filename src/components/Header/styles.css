@@ -1,0 +1,130 @@
+/* src/components/Header/styles.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .dark .header {
+    background-color: #2d2d2d;
+    border-bottom-color: #3d3d3d;
+  }
+  
+  .header nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .header nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem;
+  }
+  
+  .header-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .logout-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .dark .logout-btn {
+    background: #333;
+    color: white;
+    border-color: #666;
+  }
+  
+  .logout-btn:hover {
+    opacity: 0.8;
+      }
+
+      /* src/components/Header/styles.css */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    padding: 1rem;
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .header-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  /* src/components/NavigationButtons/styles.css */
+  .nav-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .nav-buttons button:hover {
+    opacity: 0.8;
+  }
+  
+  /* src/pages/public/Home/styles.css */
+  .home-container {
+    padding-top: 60px; /* Altura do header */
+  }
+  
+  .home-section {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-section:nth-child(odd) {
+    background-color: #f4f4f4;
+  }
+  
+  .home-section:nth-child(even) {
+    background-color: #e4e4e4;
+  }
+  
+  .dark .home-section:nth-child(odd) {
+    background-color: #2d2d2d;
+  }
+  
+  .dark .home-section:nth-child(even) {
+    background-color: #1d1d1d;
+  }

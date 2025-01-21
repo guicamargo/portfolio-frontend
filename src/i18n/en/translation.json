@@ -1,5 +1,17 @@
 {
-    "greeting": "Hello, World!",
-    "changeLanguage": "Change Language",
-    "toggleTheme": "Toggle Theme"
+  "greeting": "Hello!",
+  "toggleTheme": "Toggle Theme",
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "aiml": "AI & ML",
+    "logout": "Logout"
+  },
+  "aiml": {
+    "title": "Artificial Intelligence & Machine Learning",
+    "section1": {
+      "title": "Introduction",
+      "content": "Explore the world of AI and Machine Learning"
+    }
   }
+}

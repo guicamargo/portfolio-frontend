@@ -1,0 +1,13 @@
+.language-selector {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  .dark .language-selector {
+    background: #333;
+    color: white;
+    border-color: #666;
+  }
