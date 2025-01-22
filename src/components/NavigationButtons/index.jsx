@@ -1,6 +1,7 @@
 // src/components/NavigationButtons/index.jsx
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
+import './styles.css';
 // import { useAuth } from '../../../context/AuthContext';
 
 const NavigationButtons = () => {
@@ -46,13 +47,14 @@ const NavigationButtons = () => {
     };
   
     return (
-      <div className="nav-buttons">
+        <div className="nav-buttons">
         {navigationConfig.map((nav, index) => (
           <button
             key={index}
             onClick={() => handleScrollOrNavigate(nav.page, nav.sectionId, nav.requiresAuth)}
-            className={`${location.pathname === nav.page ? 'active' : ''} 
-                       ${nav.requiresAuth && !isAuthenticated ? 'locked' : ''}`}
+            className={`btn-2 btn
+                 ${location.pathname === nav.page ? 'active' : ''} 
+                  ${nav.requiresAuth && !isAuthenticated ? 'locked' : ''}`}
           >
             {t(nav.label)}
             {nav.requiresAuth && !isAuthenticated && (
@@ -61,6 +63,7 @@ const NavigationButtons = () => {
           </button>
         ))}
       </div>
+      
     );
   };
   

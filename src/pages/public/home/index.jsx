@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
         <section id="section1" className="home-section">
           <SectionAbout />
         </section>

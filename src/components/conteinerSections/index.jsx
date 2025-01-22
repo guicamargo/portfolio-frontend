@@ -1,17 +1,10 @@
 import React from 'react';
+import './styles.css';
 
-const ConteinerSections = ({ children }) => {
+const ConteinerSections = ({ children, isDarkMode }) => {
   return (
     <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: '#111111',
-        opacity: '0.6',
-        marginTop: '10px',
-        height: '40vh',
-        width: '100%', 
-      }}
+      className={`conteinerSections ${isDarkMode ? 'dark' : ''}`}
     >
       {children}
     </div>

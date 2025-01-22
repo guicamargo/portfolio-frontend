@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import ThemeToggle from '../ThemeToggle';
 import LanguageSelector from '../LanguageSelector';
 import NavigationButtons from '../NavigationButtons';
+import './styles.css';
+
 // import { useAuth } from '../../../context/AuthContext';
 const Header = () => {
   const { t } = useTranslation();
@@ -12,14 +14,6 @@ const Header = () => {
   return (
     <header 
   className="header" 
-  style={{
-    backgroundColor: '#111111', 
-    opacity: '0.8',
-    color: '#fff', 
-    display: 'flex', 
-    alignItems: 'center', 
-    justifyContent: 'space-between', 
-  }}
 >
   <div className="header-content" style={{ display: 'flex', alignItems: 'center', }}>
     <nav className="main-nav">
@@ -34,7 +28,6 @@ const Header = () => {
       <button 
         className="logout-btn" 
         onClick={() => { /* lógica de logout */ }} 
-        style={{ background: 'none', border: '1px solid #fff', color: '#fff', padding: '5px 10px', borderRadius: '4px' }}
       >
         {t('nav.logout')}
       </button>

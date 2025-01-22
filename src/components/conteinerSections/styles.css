@@ -1,0 +1,17 @@
+.conteinerSections {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    opacity: 0.6;
+    margin-top: 10px;
+    height: 40vh;
+    width: 100%;
+    color: #000;
+    margin-top: 70px;
+  }
+  
+  .dark .conteinerSections {
+    background-color: #000;
+    color: #fefefe;
+  }
+  

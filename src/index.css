@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   font-family: Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
@@ -36,9 +32,32 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   background-color: #f0f0f0;
+  position: fixed; /* Mantém o header fixo no topo */
+  top: 0; /* Fixa no topo da página */
+  left: 0; /* Garante que começa da borda esquerda */
+  width: 100%; /* Ocupa toda a largura da tela */
+  z-index: 1000; /* Garante que o header estará acima de outros elementos */
+  padding: 10px 20px; /* Adiciona espaço interno para conteúdo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para separação visual */
+
 }
+.dark .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  position: fixed; /* Mantém o header fixo no topo */
+  top: 0; /* Fixa no topo da página */
+  left: 0; /* Garante que começa da borda esquerda */
+  width: 100%; /* Ocupa toda a largura da tela */
+  z-index: 1000; /* Garante que o header estará acima de outros elementos */
+  padding: 10px 20px; /* Adiciona espaço interno para conteúdo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para separação visual */
+}
+
+
+
 
 nav {
   display: flex;
@@ -56,21 +75,11 @@ nav a {
   gap: 1rem;
   align-items: center;
 }
-
-.ai-ml-container {
-  padding: 2rem;
-}
-
-.ai-ml-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
 /* src/index.css */
 /* ... outros estilos ... */
 
 .header-controls {
   display: flex;
-  gap: 1rem;
   align-items: center;
 }
 
@@ -100,8 +109,7 @@ nav a {
 }
 
 .dark .header {
-  background-color: #2d2d2d;
-  border-bottom: 1px solid #3d3d3d;
+  background-color: #000;
 }
 
 .dark a {
