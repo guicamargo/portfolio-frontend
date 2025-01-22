@@ -1,28 +1,67 @@
 // src/components/NavigationButtons/index.jsx
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
+// import { useAuth } from '../../../context/AuthContext';
 
 const NavigationButtons = () => {
-  const { t } = useTranslation();
-
-  const handleScroll = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    const { t } = useTranslation();
+    const navigate = useNavigate();
+    const location = useLocation();
+       // const { isAuthenticated } = useAuth(); // Adicione este hook
+  const isAuthenticated  = true; // Temporário - trocar pela sua lógica de auth
+  
+    const navigationConfig = [
+      { page: '/', sectionId: 'section1', label: 'about' },
+      { page: '/', sectionId: 'section2', label: 'experience' },
+      { page: '/', sectionId: 'section3', label: 'education' },
+      { page: '/', sectionId: 'section4', label: 'courses' },
+      { page: '/', sectionId: 'section5', label: 'languages' },
+      { page: '/', sectionId: 'section6', label: 'portfolio' },
+      { 
+        page: '/', 
+        sectionId: 'section7', 
+        label: 'ml',
+        requiresAuth: true // Adicione esta propriedade
+      },
+      { page: '/', sectionId: 'section8', label: 'contact' }
+    ];
+  
+    const handleScrollOrNavigate = (page, sectionId, requiresAuth) => {
+      if (requiresAuth && !isAuthenticated) {
+        navigate('/login');
+        return;
+      }
+  
+      if (location.pathname === page) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } else {
+        navigate(page, { 
+          state: { scrollTo: sectionId },
+          replace: true
+        });
+      }
+    };
+  
+    return (
+      <div className="nav-buttons">
+        {navigationConfig.map((nav, index) => (
+          <button
+            key={index}
+            onClick={() => handleScrollOrNavigate(nav.page, nav.sectionId, nav.requiresAuth)}
+            className={`${location.pathname === nav.page ? 'active' : ''} 
+                       ${nav.requiresAuth && !isAuthenticated ? 'locked' : ''}`}
+          >
+            {t(nav.label)}
+            {nav.requiresAuth && !isAuthenticated && (
+              <span className="lock-icon">🔒</span>
+            )}
+          </button>
+        ))}
+      </div>
+    );
   };
-
-  return (
-    <div className="nav-buttons">
-      <button onClick={() => handleScroll('section1')}>{t('sections.section1')}</button>
-      <button onClick={() => handleScroll('section2')}>{t('sections.section2')}</button>
-      <button onClick={() => handleScroll('section3')}>{t('sections.section3')}</button>
-      <button onClick={() => handleScroll('section4')}>{t('sections.section4')}</button>
-      <button onClick={() => handleScroll('section5')}>{t('sections.section5')}</button>
-      <button onClick={() => handleScroll('section6')}>{t('sections.section6')}</button>
-      <button onClick={() => handleScroll('section7')}>{t('sections.section7')}</button>
-      <button onClick={() => handleScroll('section8')}>{t('sections.section8')}</button>
-    </div>
-  );
-};
-
-export default NavigationButtons;
+  
+  export default NavigationButtons;

@@ -4,34 +4,25 @@ import { useTranslation } from 'react-i18next';
 import ThemeToggle from '../ThemeToggle';
 import LanguageSelector from '../LanguageSelector';
 import NavigationButtons from '../NavigationButtons';
-
-const Header = ({ isPrivate }) => {
+// import { useAuth } from '../../../context/AuthContext';
+const Header = () => {
   const { t } = useTranslation();
-
+    // const { isAuthenticated } = useAuth(); // Adicione este hook
+  const  isAuthenticated  = true; // Temporário - trocar pela sua lógica de auth
   return (
     <header className="header">
       <div className="header-content">
         <nav className="main-nav">
-          {isPrivate ? (
             <>
-            <Link to="/">{t('nav.home')}</Link>
-            <NavigationButtons />
-            <Link to="/ai-ml">{t('nav.aiml')}</Link>
-          </>
-          ) : (
-            <>
-              <Link to="/">{t('nav.home')}</Link>
               <NavigationButtons />
-              <Link to="/ai-ml">{t('nav.aiml')}</Link>
             </>
-          )}
         </nav>
         
         <div className="header-controls">
           <ThemeToggle />
           <LanguageSelector />
           
-          {isPrivate && (
+          {isAuthenticated && (
             <button className="logout-btn" onClick={() => {/* lógica de logout */}}>
               {t('nav.logout')}
             </button>
