@@ -1,8 +1,13 @@
 
-const index = () => {
-  return (
-    <div>index</div>
-  )
-}
+import React from 'react';
+import ConteinerSections from "../../conteinerSections";
 
-export default index
+const Index = () => {
+  return (
+    <ConteinerSections>
+      <div style={{ color: '#fff', fontSize: '24px' }}>education</div>
+    </ConteinerSections>
+  );
+};
+
+export default Index;

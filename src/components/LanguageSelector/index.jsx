@@ -1,4 +1,3 @@
-// src/components/LanguageSelector/index.jsx
 import { useTranslation } from 'react-i18next';
 
 const LanguageSelector = () => {

@@ -1,8 +1,12 @@
+import React from 'react';
+import ConteinerSections from "../../conteinerSections";
 
-const index = () => {
+const Index = () => {
   return (
-    <div>index</div>
-  )
-}
+    <ConteinerSections>
+      <div style={{ color: '#fff', fontSize: '24px' }}>languages</div>
+    </ConteinerSections>
+  );
+};
 
-export default index
+export default Index;
