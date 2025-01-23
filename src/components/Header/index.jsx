@@ -45,6 +45,8 @@ import LanguageSelector from '../LanguageSelector';
 import NavigationButtons from '../NavigationButtons';
 import './styles.css';
 
+import MenuNavBar from '../MenuNavBar/index';
+
 const Header = () => {
   const { t } = useTranslation();
   const isAuthenticated = true;
@@ -106,14 +108,15 @@ const Header = () => {
         <ThemeToggle />
         <LanguageSelector />
         {isAuthenticated && (
-          <button
-            className="logout-btn"
-            onClick={() => {
-              // lógica de logout
-            }}
-          >
-            {t('nav.logout')}
-          </button>
+          <MenuNavBar />
+          // <button
+          //   className="logout-btn"
+          //   onClick={() => {
+          //     // lógica de logout
+          //   }}
+          // >
+          //   {t('nav.logout')}
+          // </button>
         )}
       </div>
     </header>

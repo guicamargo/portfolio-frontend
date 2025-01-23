@@ -112,7 +112,7 @@ const NavigationButtons = () => {
     {
       page: '/',
       sectionId: 'section7',
-      label: 'ml',
+      label: 'Ai&Ml',
       requiresAuth: true,
     },
     { page: '/', sectionId: 'section8', label: 'contact' },
