@@ -14,7 +14,7 @@ body.dark {
 }
 
 button {
-  margin: 0.5rem;
+  
   padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
@@ -28,37 +28,6 @@ button:hover {
   min-height: 100vh;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f0f0f0;
-  position: fixed; /* Mantém o header fixo no topo */
-  top: 0; /* Fixa no topo da página */
-  left: 0; /* Garante que começa da borda esquerda */
-  width: 100%; /* Ocupa toda a largura da tela */
-  z-index: 1000; /* Garante que o header estará acima de outros elementos */
-  padding: 10px 20px; /* Adiciona espaço interno para conteúdo */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para separação visual */
-
-}
-.dark .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000;
-  position: fixed; /* Mantém o header fixo no topo */
-  top: 0; /* Fixa no topo da página */
-  left: 0; /* Garante que começa da borda esquerda */
-  width: 100%; /* Ocupa toda a largura da tela */
-  z-index: 1000; /* Garante que o header estará acima de outros elementos */
-  padding: 10px 20px; /* Adiciona espaço interno para conteúdo */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para separação visual */
-}
-
-
-
-
 nav {
   display: flex;
   gap: 1rem;
@@ -70,37 +39,6 @@ nav a {
   padding: 0.5rem;
 }
 
-.header-controls {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-/* src/index.css */
-/* ... outros estilos ... */
-
-.header-controls {
-  display: flex;
-  align-items: center;
-}
-
-.header-controls button {
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: #fff;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.dark .header-controls button {
-  background: #333;
-  color: white;
-  border-color: #666;
-}
-
-.header-controls button:hover {
-  opacity: 0.8;
-}
 
 /* Estilos para o tema escuro */
 .dark {

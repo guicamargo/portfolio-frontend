@@ -8,19 +8,18 @@
 
 .btn-2 {
   position: relative; /* Necessário para os pseudoelementos */
-  letter-spacing: 0;
   display: inline-block;
   text-align: center;
   padding: 10px 2px;
   text-transform: uppercase;
-  background: transparent;s
-  border: none;
+  background: transparent;
   cursor: pointer;
   transition: all 280ms ease-in-out;
+  margin: 10px;
 
   &:hover,
   &:active {
-    letter-spacing: 5px;
+    letter-spacing: 3px;
   }
 
   &:after,

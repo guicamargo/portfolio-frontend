@@ -9,6 +9,7 @@ const App = () => {
     <>
     <BrowserRouter>
       <ThemeProvider>
+        
             <ParticlesComponent id="tsparticles" />
         <AppRoutes />
       </ThemeProvider>

@@ -1,21 +1,54 @@
-/* src/components/Header/styles.css */
-.header {
+.header { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
   background-color: #fafafa;
-  opacity: 0.9  !important; ;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem;
-
-}
+  opacity: 0.9;
+  display: flex;  /* Add this */
+  justify-content: space-between;  /* Add this to spread out the content */
+  align-items: center;  /* Add this to vertically center the items */
+} 
 .dark .header {
-  background-color: #000;
-  opacity: 0.9 !important;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  background-color: #000; /* Estilo para o tema escuro */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-  
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-inline-end: 30px;
+}
+
+.header-controls button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+}
+
+.dark .header-controls button {
+  background: #333;
+  color: white;
+  border-color: #666;
+}
+
+.header-controls button:hover {
+  opacity: 0.8;
+}
+
+body {
+  margin: 0; /* Remove margens padrão */
+  padding: 0;
+}
+
+.main-content {
+  margin-top: 80px; /* Ajuste para o conteúdo não ser escondido pelo header */
+}
