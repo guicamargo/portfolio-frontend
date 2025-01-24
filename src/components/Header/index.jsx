@@ -6,7 +6,8 @@ import NavigationButtons from '../NavigationButtons';
 import './styles.css';
 
 import MenuNavBar from '../MenuNavBar/index';
-
+// Menu control 
+// Controle do menu
 const Header = () => {
   const { t } = useTranslation();
   const isAuthenticated = true;
@@ -14,18 +15,23 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Detecta largura da tela para definir se é mobile
+  // Detect screen width to determine if it's mobile
+  //  Detecta largura da tela para definir se é mobile
+
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 940);
     };
 
+    // Perform initial check
     // Executa a verificação inicial
     checkScreenSize();
 
+    // Add resize event listener
     // Adiciona o evento de resize
     window.addEventListener('resize', checkScreenSize);
 
+    // Remove event listener when component unmounts
     // Remove o evento ao desmontar o componente
     return () => {
       window.removeEventListener('resize', checkScreenSize);
@@ -65,14 +71,14 @@ const Header = () => {
       </div>
 
       <div className="header-controls">
-  <ThemeToggle />
-  <LanguageSelector />
-  {isAuthenticated && (
-    <div className="menuAccount">
-      <MenuNavBar />
-    </div>
-  )}
-</div>
+        <ThemeToggle />
+        <LanguageSelector />
+        {isAuthenticated && (
+          <div className="menuAccount">
+            <MenuNavBar />
+          </div>
+        )}
+      </div>
     </header>
   );
 };
