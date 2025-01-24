@@ -1,11 +1,16 @@
 {
-  "greeting": "Olá!",
   "toggleTheme": "Alternar Tema",
   "nav": {
-    "home": "Início",
-    "dashboard": "Painel",
+    "about": "Sobre",
+    "experience": "Experiência",
+    "education": "Formação",
+    "courses": "Cursos",
+    "Languages": "Linguagens",
+    "portfolio": "Portifólio",
     "aiml": "IA & AM",
-    "logout": "Sair"
+    "contact": "Contato",
+    "logout": "Sair",
+    "login": "Entrar"
   },
   "aiml": {
     "title": "Inteligência Artificial & Aprendizado de Máquina",

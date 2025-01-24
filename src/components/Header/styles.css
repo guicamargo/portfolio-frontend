@@ -6,11 +6,13 @@
   width: 100%;
   background-color: #fafafa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: 5px;
+  padding-left: 10px;
   opacity: 0.9;
   display: flex;  /* Add this */
   justify-content: space-between;  /* Add this to spread out the content */
   align-items: center;  /* Add this to vertically center the items */
+  min-height: 55px;
 } 
 .dark .header {
   background-color: #000; /* Estilo para o tema escuro */
@@ -22,6 +24,8 @@
   gap: 1rem;
   align-items: center;
   margin-inline-end: 30px;
+  justify-content: flex-end;
+
 }
 
 .header-controls button {
@@ -31,7 +35,11 @@
   background: #fff;
   cursor: pointer;
   transition: all 0.2s;
-  display: flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  right: 100px;
+
 }
 
 .dark .header-controls button {
@@ -133,7 +141,7 @@ body {
 }
 
 /* Estilo do layout desktop */
-@media (min-width: 650px) {
+@media (min-width: 940px) {
   .menu-btn {
     display: none;
   }
@@ -149,8 +157,15 @@ body {
   }
 }
 
+.menuAccount {
+  display: flex; /* Já está correto */
+  align-items: center; /* Centraliza o conteúdo do menu verticalmente */
+  justify-content: center; /* Centraliza horizontalmente dentro do próprio menu */
+  min-width: auto;
+}
+
 /* Esconde a navegação padrão no mobile */
-@media (max-width: 649px) {
+@media (max-width: 940px) {
   .main-nav {
     display: none;
   }

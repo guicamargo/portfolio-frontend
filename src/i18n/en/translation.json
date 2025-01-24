@@ -1,11 +1,17 @@
 {
   "greeting": "Hello!",
   "toggleTheme": "Toggle Theme",
-  "nav": {
-    "home": "Home",
-    "dashboard": "Dashboard",
+"nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "courses": "Courses",
+    "languages": "Languages",
+    "portfolio": "Portfolio",
     "aiml": "AI & ML",
-    "logout": "Logout"
+    "contact": "Contact",
+    "logout": "Logout",
+    "login": "Login"
   },
   "aiml": {
     "title": "Artificial Intelligence & Machine Learning",

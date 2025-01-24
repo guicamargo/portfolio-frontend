@@ -87,7 +87,7 @@ const NavigationButtons = () => {
   // Detecta largura da tela para definir se é mobile
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 650);
+      setIsMobile(window.innerWidth < 940);
     };
 
     // Executa a verificação inicial
@@ -103,16 +103,16 @@ const NavigationButtons = () => {
   }, []);
 
   const navigationConfig = [
-    { page: '/', sectionId: 'section1', label: 'about' },
-    { page: '/', sectionId: 'section2', label: 'experience' },
-    { page: '/', sectionId: 'section3', label: 'education' },
-    { page: '/', sectionId: 'section4', label: 'courses' },
-    { page: '/', sectionId: 'section5', label: 'languages' },
-    { page: '/', sectionId: 'section6', label: 'portfolio' },
+    { page: '/', sectionId: 'section1', label: t('nav.about') },
+    { page: '/', sectionId: 'section2', label: t('nav.experience') },
+    { page: '/', sectionId: 'section3', label: t('nav.education') },
+    { page: '/', sectionId: 'section4', label: t('nav.courses') },
+    { page: '/', sectionId: 'section5', label: t('nav.languages') },
+    { page: '/', sectionId: 'section6', label: t('nav.portfolio') },
     {
       page: '/',
       sectionId: 'section7',
-      label: 'Ai&Ml',
+      label: t('nav.aiml'),
       requiresAuth: true,
     },
     { page: '/', sectionId: 'section8', label: 'contact' },
