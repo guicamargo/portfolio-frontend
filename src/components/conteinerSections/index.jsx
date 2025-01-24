@@ -1,13 +1,23 @@
 import React from 'react';
 import './styles.css';
 
-// formatação dos containers de cada seção
-const ConteinerSections = ({ children, isDarkMode }) => {
+const ConteinerSections = ({ 
+  children, 
+  isDarkMode, 
+  title 
+}) => {
   return (
     <div
       className={`conteinerSections ${isDarkMode ? 'dark' : ''}`}
     >
-      {children}
+      <div className='titleContainer'>
+        <h1 className='titleSections'>
+          {title}
+        </h1>
+      </div>
+      <div className='contentContainer'>
+        {children}
+      </div>
     </div>
   );
 };

@@ -1,3 +1,23 @@
-.aboutContainer{
-
-}
+.aboutContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .imageContainer {
+    width: 200px;
+    background-color: rgb(68, 59, 151);
+    height: 300px;
+    position: relative;
+    margin-left: 4rem;
+    z-index: -1;
+    top: -50px; /* Move up */
+  }
+  
+  .infoContainer {
+    background-color: rosybrown;
+    flex-grow: 1;
+    margin-left: 2rem;
+    position: relative;
+    z-index: 1;
+  }

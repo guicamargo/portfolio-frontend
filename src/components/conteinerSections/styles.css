@@ -1,20 +1,41 @@
 .conteinerSections {
-    display: flex;
-    flex-direction: column;
-    background-color: #fefefe;
-    opacity: 0.8;
-    margin-top: 5px;
-    height: 40vh;
-    width: 98%;
-    justify-self: center;
-    color: #000;
-    border: transparent;
-    border-radius: 5px;
-    margin-top: 30px;
-  }
-  
-  .dark .conteinerSections {
-    background-color: #000;
-    color: #fefefe;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(254, 254, 254, 0.8);
+  margin-top: 30px;
+  height: 40vh;
+  width: 98%;
+  justify-self: center;
+  color: #000;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+  position: relative; /* Add positioning */
+  z-index: 1; /* Ensure layer visibility */
+}
+.dark .conteinerSections {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fefefe;
+}
+
+.titleSections {
+
+  font-family: "Bebas Neue", serif;
+  font-size: 100px;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  display: inline-block;
+}
+
+.dark h1.titleSections {
+  color: #eee;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 20%;
+  margin-left: 5;
+  margin-top: 5px;
+}
