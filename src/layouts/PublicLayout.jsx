@@ -5,7 +5,7 @@ const PublicLayout = ({ children }) => {
   return (
     <div className="public-layout">
       <Header isPrivate={false} />
-      <main className="content">
+      <main className="content" style={{ marginTop: '55px' }}>
         {children}
       </main>
     </div>

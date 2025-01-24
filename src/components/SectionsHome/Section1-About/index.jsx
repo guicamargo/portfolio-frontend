@@ -4,7 +4,9 @@ import ConteinerSections from "../../conteinerSections";
 const Index = () => {
   return (
     <ConteinerSections>
-      <div style={{  fontSize: '24px' }}>About</div>
+      <div className="aboutContainer">
+        About
+        </div>
     </ConteinerSections>
   );
 };

@@ -18,19 +18,19 @@ const Home = () => {
   const location = useLocation();
         // const { isAuthenticated } = useAuth(); // Adicione este hook
         const  isAuthenticated  = true; // Temporário - trocar pela sua lógica de auth
-  
-  useEffect(() => {
-    if (location.state?.scrollTo) {
-      const section = document.getElementById(location.state.scrollTo);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  }, [location]);
+
+        useEffect(() => {
+          if (location.state?.scrollTo) {
+            const section = document.getElementById(location.state.scrollTo);
+            if (section) {
+              section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        }, [location]);
 
   return (
     <div className="home-container">
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
         <section id="section1" className="home-section">
           <SectionAbout />
         </section>
