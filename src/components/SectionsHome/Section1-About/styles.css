@@ -1,23 +1,155 @@
 .aboutContainer {
-    display: flex;
+  display: flex;
+  align-items: flex-start; /* Changed to align-items: flex-start */
+  position: relative;
+}
+
+.imageContainer {
+  width: 170px;
+  background-color: #5840bb;
+  height: 250px;
+  position: relative;
+  margin-left: 4rem;
+  z-index: -1;
+  top: -50px;
+}
+.dark .imageContainer {
+  background-color: #bca137;
+}
+
+.profileImage {
+  position: absolute;
+  top: 58%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+}
+
+.infoContainer {
+  flex-grow: 1;
+  margin: 0 20px 0 20px; 
+  position: relative;
+  z-index: 1;
+  top: -50px;
+  width: 250px; /* Reduced width */
+  align-self: end;
+
+}
+
+.infoText {
+  font-family: "IBM Plex Mono", serif;
+  font-style: normal;
+  color: #000000;
+  display: inline-block;
+  display: inline;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.dark .infoText {
+  color: #ffffff;
+}
+
+.nameContainer, .lastNameContainer {
+  position: absolute;
+  left: calc(4rem + 200px + 2rem); /* Positioned relative to image container */
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.dark .nameContainer, .dark .lastNameContainer {
+  color: #ffffff;
+}
+.nameContainer {
+  font-family: "Roboto Mono", serif;
+  font-style: normal;
+  color: #000000;
+  display: inline-block;
+  display: inline;
+  font-size: 40px;
+  font-weight: 600;
+  top: -60px; /* Adjust as needed */
+  left: 250px ;
+}
+
+.lastNameContainer {
+  font-family: "Roboto Mono", serif;
+  font-style: normal;
+  color: #000000;
+  display: inline-block;
+  display: inline;
+  font-size: 20px;
+  font-weight: 500;
+  top: -20px; /* Adjust as needed */
+}
+
+@media screen and (max-width: 950px) {
+  .aboutContainer {
+    flex-direction: column;
     align-items: center;
-    position: relative;
   }
-  
+
   .imageContainer {
+    margin-left: 0;
+    top: 0;
     width: 200px;
-    background-color: rgb(68, 59, 151);
     height: 300px;
-    position: relative;
-    margin-left: 4rem;
-    z-index: -1;
-    top: -50px; /* Move up */
+    order: 2;
   }
-  
+
+  .profileImage {
+    top: 50%;
+    left: 50%;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .nameContainer, .lastNameContainer {
+    position: static;
+    text-align: center;
+  }
+
+  .nameContainer {
+    left: auto;
+    top: auto;
+  }
+
+  .lastNameContainer {
+    left: auto;
+    top: auto;
+  }
+
   .infoContainer {
-    background-color: rosybrown;
-    flex-grow: 1;
-    margin-left: 2rem;
-    position: relative;
-    z-index: 1;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    order: 3;
   }
+}
+
+@media screen and (max-width: 650px) {
+  .imageContainer {
+    width: 180px;
+    height: 250px;
+  }
+
+  .nameContainer {
+    font-size: 30px;
+  }
+
+  .lastNameContainer {
+    font-size: 18px;
+  }
+
+  .infoText {
+    font-size: 16px;
+  }
+}
