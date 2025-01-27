@@ -1,155 +1,148 @@
 .aboutContainer {
-  display: flex;
-  align-items: flex-start; /* Changed to align-items: flex-start */
-  position: relative;
-}
-
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
+    align-items: flex-start;
+    position: relative;
+    padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+  }
+  .profileImage {
+    width:95%;
+    height: 95%;
+    object-fit: cover;
+  }
 .imageContainer {
   width: 170px;
   background-color: #5840bb;
   height: 250px;
   position: relative;
   margin-left: 4rem;
-  z-index: -1;
-  top: -50px;
-}
-.dark .imageContainer {
-  background-color: #bca137;
-}
-
-.profileImage {
-  position: absolute;
-  top: 58%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  height: 90%;
-}
-
-.infoContainer {
-  flex-grow: 1;
-  margin: 0 20px 0 20px; 
-  position: relative;
   z-index: 1;
-  top: -50px;
-  width: 250px; /* Reduced width */
-  align-self: end;
-
+  top: -120px;
 }
-
-.infoText {
-  font-family: "IBM Plex Mono", serif;
-  font-style: normal;
-  color: #000000;
-  display: inline-block;
-  display: inline;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.dark .infoText {
-  color: #ffffff;
-}
-
-.nameContainer, .lastNameContainer {
-  position: absolute;
-  left: calc(4rem + 200px + 2rem); /* Positioned relative to image container */
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-.dark .nameContainer, .dark .lastNameContainer {
-  color: #ffffff;
-}
-.nameContainer {
-  font-family: "Roboto Mono", serif;
-  font-style: normal;
-  color: #000000;
-  display: inline-block;
-  display: inline;
-  font-size: 40px;
-  font-weight: 600;
-  top: -60px; /* Adjust as needed */
-  left: 250px ;
-}
-
-.lastNameContainer {
-  font-family: "Roboto Mono", serif;
-  font-style: normal;
-  color: #000000;
-  display: inline-block;
-  display: inline;
-  font-size: 20px;
-  font-weight: 500;
-  top: -20px; /* Adjust as needed */
-}
-
-@media screen and (max-width: 950px) {
-  .aboutContainer {
-    flex-direction: column;
-    align-items: center;
+  
+  .dark .imageContainer {
+    background-color: #dac138;
   }
-
-  .imageContainer {
-    margin-left: 0;
-    top: 0;
-    width: 200px;
-    height: 300px;
-    order: 2;
+  div.infoContainer {
+    flex: 1;
+left: -200px;
+    position: relative;
+    z-index: -1;
+    min-width: 250px;
+    max-width: 1000px;
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 50px;
   }
-
-  .profileImage {
-    top: 50%;
-    left: 50%;
-  }
-
-  .name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    order: 1;
-    margin-bottom: 20px;
-  }
-
-  .nameContainer, .lastNameContainer {
-    position: static;
-    text-align: center;
-  }
-
+  
   .nameContainer {
-    left: auto;
-    top: auto;
+    font-family: "Roboto Mono", serif;
+    font-style: normal;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 600 ;
+    margin-left: 20px !important;
+    position: relative;
+    top: -150px;
   }
+  
+  div.lastNameContainer {
+    font-family: "Roboto Mono", serif;
+    font-style: normal;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    top: -70px;
+    margin-left: 20px !important;
+  }
+  
+  .dark .nameContainer,
+  .dark .lastNameContainer {
+    color: #ffffff;
+  }
+  /* Media Queries para responsividade */
+  @media screen and (max-width: 950px) {
+    .aboutContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    div.imageContainer {
+      margin-left: 0;
+margin-bottom: 0;
+    }
+  
+    .nameContainer,
+    .lastNameContainer {
+      margin-left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  
+    div.infoContainer {
+        margin-top: 0;
+      text-align: center;
+      padding: 0 20px;
+      left: 0;
+    }
 
-  .lastNameContainer {
-    left: auto;
-    top: auto;
   }
+  
+  @media screen and (max-width: 650px) {
+    .aboutContainer {
+      flex-direction: column !important; /* Força a direção da coluna */
+      align-items: center !important;
+      gap: 20px; /* Adiciona espaço entre os elementos */
+      width: 100%;
+    }
+  
+    .imageContainer {
+        width: 140px;
+        height: 200px;
+        margin: 0;
+        order: 1;
+        position: ;
+      }
+  
+    .nameContainer {
+      font-size: 32px;
+      width: 100%;
+      margin: 0;
+      order: 2;
+      margin-top: 10px;
+      text-align: center;
+      position: static; /* Remove o posicionamento absoluto */
+    }
+  .name{
+    max-height:45px ;
+  }
+    .lastNameContainer {
+      font-size: 18px;
+      width: 100%;
+      margin: 0;
+      order: 3;
+      text-align: center;
+      position: static; /* Remove o posicionamento absoluto */
+    }
+  
+    .infoContainer {
+      width: 80%;
+      order: 4;
+      margin: auto;
+      padding: 0 15px;
+      position: static; /* Remove o posicionamento absoluto */
+      text-align: center;
+    }
+  
+    .infoText {
+      font-size: 16px;
+      width: 100%;
+      margin: 0 auto;
+      font-size: 20px !important;
+    }
 
-  .infoContainer {
-    margin: 20px 0;
-    width: 100%;
-    max-width: 350px;
-    top: 0;
-    order: 3;
+    .titleSections {
+      font-size: 60px;
+    }
   }
-}
-
-@media screen and (max-width: 650px) {
-  .imageContainer {
-    width: 180px;
-    height: 250px;
-  }
-
-  .nameContainer {
-    font-size: 30px;
-  }
-
-  .lastNameContainer {
-    font-size: 18px;
-  }
-
-  .infoText {
-    font-size: 16px;
-  }
-}

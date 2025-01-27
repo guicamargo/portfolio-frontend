@@ -9,7 +9,7 @@ import ImgPerfil from '../../../images/Perfil/IMG_Perfil.JPG';
 const Index = () => {
   const { t } = useTranslation();
   return (
-    <ConteinerSections title={t('nav.about')}>
+    <ConteinerSections title={t('nav.about')} className="aboutSection">
       <div className="aboutContainer">
       <div className="imageContainer">
       <img src={ImgPerfil} alt="Profile" className="profileImage" />

@@ -1,41 +1,142 @@
-.conteinerSections {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(254, 254, 254, 0.8);
-  margin-top: 30px;
-  height: 40vh;
-  width: 98%;
-  justify-self: center;
-  color: #000;
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 5px;
-  position: relative; /* Add positioning */
-  z-index: 1; /* Ensure layer visibility */
-}
-.dark .conteinerSections {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fefefe;
-}
+
 
 .titleSections {
-
   font-family: "Bebas Neue", serif;
   font-size: 100px;
   font-weight: 400;
   font-style: normal;
   color: #000000;
   display: inline-block;
+  margin: 0;
 }
-
-.dark h1.titleSections {
-  color: #eee;
-}
-
 .titleContainer {
   display: flex;
   justify-content: left;
   align-items: center;
   height: 20%;
-  margin-left: 5;
-  margin-top: 5px;
+
+}
+.dark h1.titleSections {
+  color: #eee;
+}
+
+.dark .conteinerSections {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fefefe;
+}
+/* Modificações no ConteinerSections/styles.css */
+.conteinerSections {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(254, 254, 254, 0.8);
+  margin-top: 30px;
+  width: 98%;
+  min-height: 40vh; /* Mudamos de height fixo para min-height */
+  height: auto; /* Permite que cresça conforme o conteúdo */
+  justify-self: center;
+  color: #000;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Modificações no componente About/styles.css */
+.aboutContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
+  align-items: flex-start;
+  position: relative;
+  padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+}
+
+.imageContainer {
+  width: 170px;
+  background-color: #5840bb;
+  height: 250px;
+  position: relative;
+  margin-left: 4rem;
+  z-index: 1; /* Alterado para ficar acima do container */
+  top: -50px;
+}
+
+.infoContainer {
+  flex: 1;
+  margin: 0 20px;
+  position: relative;
+  z-index: 1;
+  top: -50px;
+  min-width: 250px;
+  max-width: 600px;
+}
+
+.nameContainer {
+  font-family: "Roboto Mono", serif;
+  font-style: normal;
+  color: #000000;
+  font-size: 40px;
+  font-weight: 600;
+  position: relative;
+  margin-left: 250px;
+  top: -60px;
+}
+
+.lastNameContainer {
+  font-family: "Roboto Mono", serif;
+  font-style: normal;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  margin-left: 250px;
+  top: -20px;
+}
+
+/* Media Queries para responsividade */
+@media screen and (max-width: 950px) {
+  .aboutContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageContainer {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .nameContainer,
+  .lastNameContainer {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .infoContainer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .imageContainer {
+    width: 140px;
+    height: 200px;
+  }
+
+  .nameContainer {
+    font-size: 32px;
+  }
+
+  .lastNameContainer {
+    font-size: 18px;
+  }
+
+  .infoText {
+    font-size: 16px;
+  }
+
+  .titleSections {
+    font-size: 60px;
+  }
 }
