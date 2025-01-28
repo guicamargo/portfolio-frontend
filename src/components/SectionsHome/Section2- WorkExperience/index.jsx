@@ -1,86 +1,151 @@
-import React, {useRef,useState} from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import ConteinerSections from "../../conteinerSections";
-import { ChevronUp } from 'lucide-react';
-import { ChevronDown } from 'lucide-react';
-import { CornerRightUp } from 'lucide-react';
+import { ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import { CornerRightUp } from "lucide-react";
 
-import './styles.css';
+import "./styles.css";
 
 const Index = () => {
   const { t } = useTranslation();
-  const accordionRef = useRef(null);
-  const [isAnyOpen, setIsAnyOpen] = useState(true);
+  const [openSections, setOpenSections] = useState({
+    "section-1": true,
+    "section-2": false,
+    "section-3": false,
+    "section-4": false,
+  });
 
   const closeAll = () => {
-    if (accordionRef.current) {
-      const details = accordionRef.current.querySelectorAll('details');
-      details.forEach(detail => {
-        detail.removeAttribute('open');
-      });
-      setIsAnyOpen(false);
-    }
+    const allClosed = Object.keys(openSections).reduce((acc, key) => {
+      acc[key] = false;
+      return acc;
+    }, {});
+    setOpenSections(allClosed);
   };
 
-  const handleDetailsClick = (e) => {
-    if (e.target.tagName.toLowerCase() === 'summary') {
-      const allDetails = accordionRef.current.querySelectorAll('details');
-      const anyOpen = Array.from(allDetails).some(detail => detail.hasAttribute('open'));
-      setIsAnyOpen(anyOpen);
-    }
+  const toggleSection = (sectionId) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [sectionId]: !prev[sectionId],
+    }));
   };
+
+  const isAnyOpen = Object.values(openSections).some(Boolean);
 
   return (
-    <ConteinerSections title={t('nav.experience')} className="experienceContainer">
-    <div className="accordion-container">
-      <div className="accordion-header">
-        <button 
-          className="close-all-button"
-          onClick={closeAll}
-          disabled={!isAnyOpen}
-        >
-          <CornerRightUp/>
-          Close All
-        </button>
+    <ConteinerSections
+      title={t("nav.experience")}
+      className="experienceContainer"
+    >
+      <div className="accordion-container">
+        <div className="accordion-header">
+        </div>
+        <div className="accordion">
+          <details open={openSections["section-1"]}>
+            <summary
+              onClick={(e) => {
+                e.preventDefault();
+                toggleSection("section-1");
+              }}
+            >
+              <span className="icon-wrapper">
+                {openSections["section-1"] ? (
+                  <ChevronUp size={18} />
+                ) : (
+                  <ChevronDown size={18} />
+                )}
+              </span>
+              titulo1
+            </summary>
+            <div className="accordion-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit excepturi fugiat ipsum tenetur porro id obcaecati aliquid magni, est ipsa, perferendis modi earum nobis libero corporis voluptates? Aspernatur, assumenda?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque et est cum omnis, neque molestiae voluptatum atque aut quaerat ipsam nihil! Molestias quis necessitatibus placeat inventore nam quisquam doloribus sit!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illo quas minus voluptate. Odit aut ipsa deleniti. Explicabo, vitae possimus quasi aperiam temporibus nam ab. Reprehenderit praesentium porro molestias ipsa?
+
+            </div>
+          </details>
+
+          <details open={openSections["section-2"]}>
+            <summary
+              onClick={(e) => {
+                e.preventDefault();
+                toggleSection("section-2");
+              }}
+            >
+              <span className="icon-wrapper">
+                {openSections["section-2"] ? (
+                  <ChevronUp size={18} />
+                ) : (
+                  <ChevronDown size={18} />
+                )}
+              </span>
+              titulo2
+            </summary>
+            <div className="accordion-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit excepturi fugiat ipsum tenetur porro id obcaecati aliquid magni, est ipsa, perferendis modi earum nobis libero corporis voluptates? Aspernatur, assumenda?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque et est cum omnis, neque molestiae voluptatum atque aut quaerat ipsam nihil! Molestias quis necessitatibus placeat inventore nam quisquam doloribus sit!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illo quas minus voluptate. Odit aut ipsa deleniti. Explicabo, vitae possimus quasi aperiam temporibus nam ab. Reprehenderit praesentium porro molestias ipsa?
+              
+            </div>
+          </details>
+
+          <details open={openSections["section-3"]}>
+            <summary
+              onClick={(e) => {
+                e.preventDefault();
+                toggleSection("section-3");
+              }}
+            >
+              <span className="icon-wrapper">
+                {openSections["section-3"] ? (
+                  <ChevronUp size={18} />
+                ) : (
+                  <ChevronDown size={18} />
+                )}
+              </span>
+              titulo3{" "}
+            </summary>
+            <div className="accordion-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit excepturi fugiat ipsum tenetur porro id obcaecati aliquid magni, est ipsa, perferendis modi earum nobis libero corporis voluptates? Aspernatur, assumenda?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque et est cum omnis, neque molestiae voluptatum atque aut quaerat ipsam nihil! Molestias quis necessitatibus placeat inventore nam quisquam doloribus sit!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illo quas minus voluptate. Odit aut ipsa deleniti. Explicabo, vitae possimus quasi aperiam temporibus nam ab. Reprehenderit praesentium porro molestias ipsa?
+              
+            </div>
+          </details>
+
+          <details open={openSections["section-4"]}>
+            <summary
+              onClick={(e) => {
+                e.preventDefault();
+                toggleSection("section-4");
+              }}
+            >
+              <span className="icon-wrapper">
+                {openSections["section-4"] ? (
+                  <ChevronUp size={18} />
+                ) : (
+                  <ChevronDown size={18} />
+                )}
+              </span>
+              titulo4{" "}
+            </summary>
+            <div className="accordion-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit excepturi fugiat ipsum tenetur porro id obcaecati aliquid magni, est ipsa, perferendis modi earum nobis libero corporis voluptates? Aspernatur, assumenda?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque et est cum omnis, neque molestiae voluptatum atque aut quaerat ipsam nihil! Molestias quis necessitatibus placeat inventore nam quisquam doloribus sit!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illo quas minus voluptate. Odit aut ipsa deleniti. Explicabo, vitae possimus quasi aperiam temporibus nam ab. Reprehenderit praesentium porro molestias ipsa?
+              
+            </div>
+          </details>
+          <button
+            className="close-all-button"
+            onClick={closeAll}
+            disabled={!isAnyOpen}
+          >
+            Close All <CornerRightUp size={18} />
+          </button>
+        </div>
       </div>
-      <div className="accordion" ref={accordionRef} onClick={handleDetailsClick}>
-        <details>
-          <summary>
-            How do you create an accordion?
-          </summary>
-          <div>
-            Easy! As long as you 
-          </div>
-        </details>
-        
-        <details>
-          <summary>
-            What 
-          </summary>
-          <div>
-            No worries.
-          </div>
-        </details>
-        
-        <details>
-          <summary>
-            What type of 
-          </summary>
-          <div>
-            Almost anything you'd like.
-          </div>
-        </details>
-        
-        <details>
-          <summary>
-            How does it work?
-          </summary>
-          <div>
-            The <code>&lt;details&gt;</code> 
-          </div>
-        </details>
-      </div>
-    </div>
     </ConteinerSections>
   );
 };
