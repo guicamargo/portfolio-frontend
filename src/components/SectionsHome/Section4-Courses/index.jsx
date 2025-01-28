@@ -1,10 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ConteinerSections from "../../conteinerSections";
+import './styles.css';
 
 const Index = () => {
+  const { t } = useTranslation();
   return (
-    <ConteinerSections>
-      <div style={{ color: '#fff', fontSize: '24px' }}>courses</div>
+    <ConteinerSections title={t('nav.courses')} className="coursesContainer">
+      <div>
+        <p>texto</p>
+      </div>
     </ConteinerSections>
   );
 };

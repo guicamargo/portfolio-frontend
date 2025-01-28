@@ -14,6 +14,7 @@
   justify-content: left;
   align-items: center;
   height: 20%;
+  z-index: 2;
 
 }
 .dark h1.titleSections {
@@ -41,7 +42,7 @@
   z-index: 1;
 }
 
-/* Modificações no componente About/styles.css */
+/* Caracteristicas de cada sessão*/
 .aboutContainer {
   display: flex;
   flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
@@ -50,6 +51,64 @@
   padding: 20px 0; /* Adiciona padding vertical para espaçamento */
 }
 
+.experienceContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
+  align-items: flex-start;
+  position: relative;
+  padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+}
+
+.educationContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
+  align-items: flex-start;
+  position: relative;
+  padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+}
+
+.coursesContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
+  align-items: flex-start;
+  position: relative;
+  padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+}
+
+.languagesContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
+  align-items: flex-start;
+  position: relative;
+  padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+}
+
+.portfolioContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
+  align-items: flex-start;
+  position: relative;
+  padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+}
+
+.aiMlContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
+  align-items: flex-start;
+  position: relative;
+  padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+}
+
+
+.contactContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
+  align-items: flex-start;
+  position: relative;
+  padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+}
+
+*/
 .imageContainer {
   width: 170px;
   background-color: #5840bb;
