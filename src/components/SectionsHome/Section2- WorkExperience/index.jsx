@@ -56,13 +56,11 @@ const Index = () => {
                   <ChevronDown size={18} />
                 )}
               </span>
-              titulo1
+              {t("sectionExperience.Experience1")}
             </summary>
             <div className="accordion-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit excepturi fugiat ipsum tenetur porro id obcaecati aliquid magni, est ipsa, perferendis modi earum nobis libero corporis voluptates? Aspernatur, assumenda?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque et est cum omnis, neque molestiae voluptatum atque aut quaerat ipsam nihil! Molestias quis necessitatibus placeat inventore nam quisquam doloribus sit!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illo quas minus voluptate. Odit aut ipsa deleniti. Explicabo, vitae possimus quasi aperiam temporibus nam ab. Reprehenderit praesentium porro molestias ipsa?
-
+            {t("sectionExperience.description1.0")}
+             
             </div>
           </details>
 
@@ -80,13 +78,10 @@ const Index = () => {
                   <ChevronDown size={18} />
                 )}
               </span>
-              titulo2
+              {t("sectionExperience.Experience2")}
             </summary>
             <div className="accordion-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit excepturi fugiat ipsum tenetur porro id obcaecati aliquid magni, est ipsa, perferendis modi earum nobis libero corporis voluptates? Aspernatur, assumenda?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque et est cum omnis, neque molestiae voluptatum atque aut quaerat ipsam nihil! Molestias quis necessitatibus placeat inventore nam quisquam doloribus sit!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illo quas minus voluptate. Odit aut ipsa deleniti. Explicabo, vitae possimus quasi aperiam temporibus nam ab. Reprehenderit praesentium porro molestias ipsa?
-              
+            {t("sectionExperience.description2.0")}
             </div>
           </details>
 
@@ -104,13 +99,10 @@ const Index = () => {
                   <ChevronDown size={18} />
                 )}
               </span>
-              titulo3{" "}
+              {t("sectionExperience.Experience3")}
             </summary>
             <div className="accordion-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit excepturi fugiat ipsum tenetur porro id obcaecati aliquid magni, est ipsa, perferendis modi earum nobis libero corporis voluptates? Aspernatur, assumenda?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque et est cum omnis, neque molestiae voluptatum atque aut quaerat ipsam nihil! Molestias quis necessitatibus placeat inventore nam quisquam doloribus sit!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illo quas minus voluptate. Odit aut ipsa deleniti. Explicabo, vitae possimus quasi aperiam temporibus nam ab. Reprehenderit praesentium porro molestias ipsa?
-              
+            {t("sectionExperience.description3.0")}
             </div>
           </details>
 
@@ -128,13 +120,10 @@ const Index = () => {
                   <ChevronDown size={18} />
                 )}
               </span>
-              titulo4{" "}
+              {t("sectionExperience.Experience4")}
             </summary>
             <div className="accordion-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugit excepturi fugiat ipsum tenetur porro id obcaecati aliquid magni, est ipsa, perferendis modi earum nobis libero corporis voluptates? Aspernatur, assumenda?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque et est cum omnis, neque molestiae voluptatum atque aut quaerat ipsam nihil! Molestias quis necessitatibus placeat inventore nam quisquam doloribus sit!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illo quas minus voluptate. Odit aut ipsa deleniti. Explicabo, vitae possimus quasi aperiam temporibus nam ab. Reprehenderit praesentium porro molestias ipsa?
-              
+            {t("sectionExperience.description4.0")}
             </div>
           </details>
           <button
@@ -142,7 +131,7 @@ const Index = () => {
             onClick={closeAll}
             disabled={!isAnyOpen}
           >
-            Close All <CornerRightUp size={18} />
+            {t("sectionExperience.AccordionCloseAll")} <CornerRightUp size={18} />
           </button>
         </div>
       </div>
