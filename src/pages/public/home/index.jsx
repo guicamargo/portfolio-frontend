@@ -13,6 +13,8 @@ import SectionPortfolio from '../../../components/SectionsHome/Section6-Portfoli
 import SectionAiMl from '../../../components/SectionsHome/Section7-AiMl/index';
 import SectionContact from '../../../components/SectionsHome/Section8-Contact/index';
 
+import ScrollToTopButton from '../../../components/ScrollToTopButton/index';
+
 const Home = () => {
   const { t } = useTranslation();
   const location = useLocation();
@@ -30,6 +32,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1px' }}>
         <section id="section1" className="home-section">
           <SectionAbout />
@@ -63,8 +66,8 @@ const Home = () => {
           )}
         </section>
         <section id="section8" className="home-section">
-          <SectionContact />
         </section>
+      <ScrollToTopButton />
       </div>
     </div>
   );
