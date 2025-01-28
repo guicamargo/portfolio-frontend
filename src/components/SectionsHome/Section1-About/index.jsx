@@ -24,10 +24,10 @@ const Index = () => {
       </div>
       <div className="infoContainer">
         <p className="infoText">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Perferendis perspiciatis corporis doloremque, reiciendis tempore iste sapiente sed voluptates minima hic.
-          Quasi aut illo iusto vitae nostrum. Vitae eveniet quidem quia.        
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          {t('sectionAbout.info.1')}
+          <br/>
+          <br/>
+          {t('sectionAbout.info.2')}
         </p>
         </div>
 
