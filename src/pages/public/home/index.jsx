@@ -37,16 +37,16 @@ const Home = () => {
           <SectionAbout />
         </section>
         <section id="section2" className="home-section">
-          <SectionExperience />
+          <SectionSkills />
         </section>
         <section id="section3" className="home-section">
-          <SectionEducation />
+          <SectionExperience />
         </section>
         <section id="section4" className="home-section">
-          <SectionCourses />
+          <SectionEducation />
         </section>
         <section id="section5" className="home-section">
-          <SectionSkills />
+          <SectionCourses />
         </section>
         <section id="section6" className="home-section">
           <SectionPortfolio />
