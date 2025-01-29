@@ -32,7 +32,6 @@
   background-color: rgba(254, 254, 254, 0.8);
   margin-top: 30px;
   width: 98%;
-  min-height: 40vh; /* Mudamos de height fixo para min-height */
   height: auto; /* Permite que cresça conforme o conteúdo */
   justify-self: center;
   color: #000;
@@ -81,6 +80,7 @@
   align-items: flex-start;
   position: relative;
   padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+
 }
 
 .portfolioContainer {

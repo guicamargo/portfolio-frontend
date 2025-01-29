@@ -6,9 +6,10 @@ import './styles.css';
 const Index = () => {
   const { t } = useTranslation();
   return (
-    <ConteinerSections title={t('nav.languages')} className="languagesContainer">
+    <ConteinerSections title={t('nav.education')} className="educationContainer">
       <div>
         <p>texto</p>
+        <a href="https://codepen.io/william-goldsworthy/pen/JzVajj"> modelo</a>
       </div>
     </ConteinerSections>
   );
