@@ -8,7 +8,6 @@
   - Skills;
   - portfolio;
   - Ai&ML;
-  - contacts;
     
 - create page AIML;
 - dev autentication and autorization;
