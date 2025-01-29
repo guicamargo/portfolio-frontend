@@ -1,0 +1,27 @@
+{
+  "greeting": "Hello!",
+  "toggleTheme": "Toggle Theme",
+"nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "courses": "Courses",
+    "languages": "Languages",
+    "portfolio": "Portfolio",
+    "aiml": "AI & ML",
+    "contact": "Contact",
+    "logout": "Logout",
+    "login": "Login"
+  },
+  "aiml": {
+    "title": "Artificial Intelligence & Machine Learning",
+    "section1": {
+      "title": "Introduction",
+      "content": "Explore the world of AI and Machine Learning"
+    }
+  },
+  "sectionAbout": {
+  "info.1": "Hello! My name is Guilherme. I have a degree in Computer Engineering from the State University of Ponta Grossa (UEPG) and work as a fullstack developer. My expertise lies in developing robust backends using C#, while on the frontend, I focus on delivering dynamic experiences with JavaScript and React.",
+  "info.2": "I have experience in developing APIs and process automation (RPA). Currently, I am steering my career towards areas such as MLOps and Artificial Intelligence. I believe that learning Cloud Computing is essential for this transition, and I am constantly seeking new ways to expand my technical and professional knowledge."
+}
+}

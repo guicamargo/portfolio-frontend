@@ -1,0 +1,153 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Mono", sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  font-size: 1.25rem;
+}
+
+*:focus {
+  outline: none;
+}
+
+.accordion-container {
+  width: 90%;
+  max-width: 100%;
+margin-bottom: 20px;
+  justify-self: center;
+  max-height: auto;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header h2 {
+  margin: 0;
+}
+
+.close-all-button {
+    font-family: "roboto mono", sans-serif !important;
+  padding: 0.5rem 1rem;
+  margin: 1rem ;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+
+}
+
+.close-all-button:hover {
+  background-color: #575757;
+}
+.close-all-button:disabled {
+  background-color: #fff;
+  color: #000;
+  cursor: not-allowed;
+  border-color: #000;
+}
+.dark .close-all-button {
+  background-color: #000000;
+  color: #fff;
+  border-color: #fff;
+}
+
+.dark .close-all-button:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #ffffff;
+}
+
+details div {
+  border-left: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  padding: 1.5em;
+}
+
+details div > * + * {
+  margin-top: 1.5em;
+}
+
+details + details {
+  margin-top: .5rem;
+}
+
+summary {
+  font-family: "roboto mono", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  list-style: none;
+  border: 2px solid ;
+  border-radius: 5px;
+  padding: .75em 1em;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+  color: #000;
+}
+summary:hover {
+  background-color: #cccccc;
+}
+
+.dark summary {
+  background-color: #000 ;
+  border-color: #fff;
+  color: #fff;
+}
+
+.dark summary:hover {
+  background-color: #fff;
+  color: #000;  
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+.accordion-text {
+  font-family: "IBM Plex Mono", sans-serif;
+  
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color);
+}
+
+details[open] summary {
+  background-color: #ccc;
+}
+.dark details[open] summary {
+  background-color: #444444;
+  color: #fff;
+}
+
+
+a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 1px 0 0;
+}
+
+a:hover {
+  box-shadow: 0 3px 0 0;
+}
+
+code {
+  font-family: monospace;
+  font-weight: 600;
+}

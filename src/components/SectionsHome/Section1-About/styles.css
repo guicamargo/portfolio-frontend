@@ -1,0 +1,151 @@
+.aboutContainer {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
+    align-items: flex-start;
+    position: relative;
+    padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+  }
+  .profileImage {
+    width:95%;
+    height: 95%;
+    object-fit: cover;
+  }
+.imageContainer {
+  width: 170px;
+  background-color: #5840bb;
+  height: 250px;
+  position: relative;
+  margin-left: 4rem;
+  z-index: 1;
+  top: -60px;
+}
+  
+  .dark .imageContainer {
+    background-color: #dac138;
+  }
+  div.infoContainer {
+    flex: 1;
+left: -200px;
+    position: relative;
+    z-index: -1;
+    min-width: 250px;
+    max-width: 1000px;
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 50px;
+  }
+  .infoText{
+    font-family: "IBM Plex Mono", serif;
+  }
+  
+  .nameContainer {
+    font-family: "Roboto Mono", serif;
+    font-style: normal;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 600 ;
+    margin-left: 20px !important;
+    position: relative;
+    top: -150px;
+  }
+  
+  div.lastNameContainer {
+    font-family: "Roboto Mono", serif;
+    font-style: normal;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    top: -70px;
+    margin-left: 25px !important;
+  }
+  
+  .dark .nameContainer,
+  .dark .lastNameContainer {
+    color: #ffffff;
+  }
+  /* Media Queries para responsividade */
+  @media screen and (max-width: 950px) {
+    .aboutContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    div.imageContainer {
+      margin-left: 0;
+margin-bottom: 0;
+    }
+  
+    .nameContainer,
+    .lastNameContainer {
+      margin-left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  
+    div.infoContainer {
+        margin-top: 0;
+      text-align: center;
+      padding: 0 20px;
+      left: 0;
+    }
+
+  }
+  
+  @media screen and (max-width: 650px) {
+    .aboutContainer {
+      flex-direction: column !important; /* Força a direção da coluna */
+      align-items: center !important;
+      gap: 20px; /* Adiciona espaço entre os elementos */
+      width: 100%;
+    }
+  
+    .imageContainer {
+        width: 140px;
+        height: 200px;
+        margin: 0;
+        order: 1;
+        top:-40px;
+      }
+  
+    .nameContainer {
+      font-size: 32px;
+      width: 100%;
+      margin: 0;
+      order: 2;
+      margin-top: 10px;
+      text-align: center;
+      position: static; /* Remove o posicionamento absoluto */
+    }
+  .name{
+    max-height:45px ;
+  }
+    .lastNameContainer {
+      font-size: 18px;
+      width: 100%;
+      margin: 0;
+      order: 3;
+      text-align: center;
+      position: static; /* Remove o posicionamento absoluto */
+    }
+  
+    .infoContainer {
+      width: 80%;
+      order: 4;
+      margin: auto;
+      padding: 0 15px;
+      position: static; /* Remove o posicionamento absoluto */
+      text-align: center;
+    }
+  
+    .infoText {
+      font-size: 16px;
+      width: 100%;
+      margin: 0 auto;
+      font-size: 20px !important;
+    }
+
+    .titleSections {
+      font-size: 60px;
+    }
+  }

@@ -1,0 +1,190 @@
+
+.btn {
+  color: #000;
+}
+.dark .btn {
+  color: #fff;
+}
+
+.btn-2 {
+  position: relative; /* Necessário para os pseudoelementos */
+  display: inline-block;
+  text-align: center;
+  padding: 10px 2px;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  transition: all 280ms ease-in-out;
+  margin: 10px;
+
+  &:hover,
+  &:active {
+    letter-spacing: 3px;
+  }
+
+  &:after,
+  &:before {
+    content: " ";
+    backface-visibility: hidden;
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 280ms ease-in-out;
+  }
+
+  &:hover:after,
+  &:hover:before {
+    border: 1px solid #000; /* Corrigido */
+    border-color: #000;
+    width: 70%;
+  }
+
+  &:before {
+    top: 0;
+    bottom: auto;
+  }
+
+
+}
+
+.dark .btn-2 {
+ 
+  position: relative; /* Necessário para os pseudoelementos */
+  letter-spacing: 0;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 2px;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 280ms ease-in-out;
+
+  &:hover,
+  &:active {
+    letter-spacing: 5px;
+  }
+
+  &:after,
+  &:before {
+    content: " ";
+    backface-visibility: hidden;
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 280ms ease-in-out;
+  }
+
+  &:hover:after,
+  &:hover:before {
+    border: 1px solid #fff; /* Corrigido */
+    border-color: #fff;
+    width: 70%;
+  }
+
+  &:before {
+    top: 0;
+    bottom: auto;
+  }
+
+}
+
+/* Estilo para o layout desktop */
+.nav-buttons.desktop {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Estilo para o layout mobile */
+.nav-buttons.mobile {
+  display: flex;
+  flex-direction: column; /* Empilha verticalmente */
+}
+
+/* Botões (mantendo os estilos e animações originais) */
+.nav-buttons .btn {
+  position: relative; /* Necessário para os pseudoelementos */
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  transition: all 280ms ease-in-out;
+  color: var(--btn-color, #000); /* Mantém suporte ao tema claro/escuro */
+}
+
+.nav-buttons.mobile .btn{
+  color: #fff;
+}
+
+.nav-buttons.mobile .btn:hover:after,
+.nav-buttons.mobile .btn:hover:before {
+  border: 1px solid var(--btn-border-color, #fff);
+  width: 70%;
+}
+
+
+.dark .nav-buttons .btn {
+  color: var(--btn-color-dark, #fff); /* Tema escuro */
+}
+
+.nav-buttons .btn:hover:after,
+.nav-buttons .btn:hover:before {
+  border: 1px solid var(--btn-border-color, #000);
+  width: 70%;
+}
+
+
+.dark .nav-buttons .btn:hover:after,
+.dark .nav-buttons .btn:hover:before {
+  border: 1px solid var(--btn-border-color, #fff);
+}
+
+/* Animações e efeitos nos botões */
+.nav-buttons .btn:hover,
+.nav-buttons .btn:active {
+  letter-spacing: 3px;
+}
+
+.nav-buttons .btn:after,
+.nav-buttons .btn:before {
+  content: " ";
+  backface-visibility: hidden;
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 280ms ease-in-out;
+}
+
+
+.nav-buttons .btn:before {
+  top: 0;
+  bottom: auto;
+}
+
+
+
+/* Botão ativo */
+.nav-buttons .btn.active {
+  font-weight: bold;
+
+}
+
+.dark .nav-buttons .btn.active {
+  background-color: var(--btn-active-bg-dark, transparent);
+  border-color: var(--btn-border-color-dark, #fff);
+}
+
+/* Botão bloqueado (não autenticado) */
+.nav-buttons .btn.locked {
+  cursor: not-allowed;
+  color: #999;
+  border-color: #999;
+  opacity: 0.6;
+}

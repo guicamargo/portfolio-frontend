@@ -1,0 +1,37 @@
+.button-ReturnTop {
+    position: fixed;
+    bottom: 1rem; /* Distância da parte inferior */
+    right: 1rem; /* Distância da lateral direita */
+    padding: 1rem; /* Tamanho do botão */
+    background-color: #fff; /* Cor de fundo no tema claro */
+    border: 2px solid #000; /* Borda no tema claro */
+    color: #000; /* Cor do ícone no tema claro */
+    border-radius: 5px; /* Botão arredondado */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    transition: all 0.3s ease-in-out; /* Suavidade nas interações */
+    transform: scale(1); /* Tamanho inicial */
+    cursor: pointer; /* Indicador de clique */
+    z-index: 999; /* Garantir que fique acima de outros elementos */
+  }
+  
+  .button-ReturnTop:hover {
+    background-color: #302f2f; /* Fundo ao passar o mouse */
+    color: #fff; /* Cor do ícone ao passar o mouse */
+    border: 2px solid #fff; /* Alteração na borda */
+    transform: scale(1.1); /* Leve aumento no tamanho */
+  }
+  
+  /* Tema escuro */
+  .dark .button-ReturnTop {
+    background-color: #000; /* Fundo no tema escuro */
+    border: 2px solid #fff; /* Borda no tema escuro */
+    color: #fff; /* Cor do ícone no tema escuro */
+  }
+  
+  .dark .button-ReturnTop:hover {
+    background-color: #302f2f; /* Fundo ao passar o mouse no tema escuro */
+    transform: scale(1.1); /* Leve aumento no tamanho */
+    color: #fff; /* Cor do ícone */
+    border: 2px solid #fff; /* Alteração na borda */
+  }
+  

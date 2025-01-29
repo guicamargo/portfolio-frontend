@@ -1,0 +1,38 @@
+{
+  "toggleTheme": "Alternar Tema",
+  "returnTop": "Voltar ao topo",
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "education": "Formação",
+    "courses": "Cursos",
+    "Languages": "Linguagens",
+    "portfolio": "Portifólio",
+    "aiml": "IA & AM",
+    "contact": "Contato",
+    "logout": "Sair",
+    "login": "Entrar"
+  },
+  "aiml": {
+    "title": "Inteligência Artificial & Aprendizado de Máquina",
+    "section1": {
+      "title": "Introdução",
+      "content": "Explore o mundo da IA e do Aprendizado de Máquina"
+    }
+  },
+  "sectionAbout":{
+    "info.1": "Olá! Meu nome é Guilherme, sou formado em Engenharia de Computação pela Universidade Estadual de Ponta Grossa (UEPG) e atuo como desenvolvedor fullstack. Minha especialidade está no desenvolvimento de backends robustos utilizando C#, enquanto no frontend foco em entregar experiências dinâmicas com JavaScript e React.",
+    "info.2": "Tenho experiência no desenvolvimento de APIs e automação de processos (RPA) e atualmente estou direcionando minha carreira para áreas como, MLOps e Inteligência Artificial. Acredito que o aprendizado em Cloud Computing é essencial para essa transição e estou continuamente buscando novas formas de expandir meu conhecimento técnico e profissional."
+  },
+  "sectionExperience": {
+    "AccordionCloseAll":"Fechar tudo",
+    "Experience1": "Desenvolvedor de sistemas",
+    "description1.0": "Desenvolvimento de backends robustos utilizando C#",
+    "Experience2": "Desenvolvedor de sistemas",
+    "description2.0": "Desenvolvimento de backends robustos utilizando C#",
+    "Experience3": "Desenvolvedor de sistemas",
+    "description3.0": "Desenvolvimento de backends robustos utilizando C#",
+    "Experience4": "Desenvolvedor de sistemas",
+    "description4.0": "Desenvolvimento de backends robustos utilizando C#"
+  }
+}

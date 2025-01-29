@@ -1,0 +1,172 @@
+.header { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fafafa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  padding-left: 10px;
+  opacity: 0.9;
+  display: flex;  /* Add this */
+  justify-content: space-between;  /* Add this to spread out the content */
+  align-items: center;  /* Add this to vertically center the items */
+  min-height: 55px;
+} 
+.dark .header {
+  background-color: #000; /* Estilo para o tema escuro */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-inline-end: 30px;
+  justify-content: flex-end;
+
+}
+
+.header-controls button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  right: 100px;
+
+}
+
+.dark .header-controls button {
+  background: #333;
+  color: white;
+  border-color: #666;
+}
+
+.header-controls button:hover {
+  opacity: 0.8;
+}
+
+body {
+  margin: 0; /* Remove margens padrão */
+  padding: 0;
+}
+
+.main-content {
+  margin-top: 80px; /* Ajuste para o conteúdo não ser escondido pelo header */
+}
+
+/* ======================================================================================*/
+
+
+/* Botão do menu no mobile */
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+.dark .menu-btn{
+  color: #dadada;
+}
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa a largura total */
+  height: 100%; /* Ocupa a altura total */
+  background-color: #333;
+  color: #fff;
+  z-index: 1000;
+  padding: 1px 20px;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+/* Botão para fechar a sidebar */
+.close-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-right: 20px;
+}
+
+/* Navegação dentro da sidebar */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Controles adicionais na sidebar */
+.sidebar-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Estilo para os links na sidebar */
+.sidebar-nav a,
+.sidebar-controls button {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar-nav a:hover,
+.sidebar-controls button:hover {
+  text-decoration: underline;
+}
+
+/* Estilo do layout desktop */
+@media (min-width: 940px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.menuAccount {
+  display: flex; /* Já está correto */
+  align-items: center; /* Centraliza o conteúdo do menu verticalmente */
+  justify-content: center; /* Centraliza horizontalmente dentro do próprio menu */
+  min-width: auto;
+}
+
+/* Esconde a navegação padrão no mobile */
+@media (max-width: 940px) {
+  .main-nav {
+    display: none;
+  }
+}
