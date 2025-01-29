@@ -64,6 +64,9 @@ const Home = () => {
             </div>
           )}
         </section>
+        <section id="section6" className="home-section">
+          <SectionContact />
+        </section>
         <section id="section8" className="home-section"></section>
         <ScrollToTopButton />
       </div>

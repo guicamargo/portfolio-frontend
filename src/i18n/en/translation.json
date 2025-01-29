@@ -1,7 +1,7 @@
 {
-  "greeting": "Hello!",
   "toggleTheme": "Toggle Theme",
-"nav": {
+  "returnTop": "Return to top",
+  "nav": {
     "about": "About",
     "experience": "Experience",
     "education": "Education",
@@ -21,7 +21,33 @@
     }
   },
   "sectionAbout": {
-  "info.1": "Hello! My name is Guilherme. I have a degree in Computer Engineering from the State University of Ponta Grossa (UEPG) and work as a fullstack developer. My expertise lies in developing robust backends using C#, while on the frontend, I focus on delivering dynamic experiences with JavaScript and React.",
-  "info.2": "I have experience in developing APIs and process automation (RPA). Currently, I am steering my career towards areas such as MLOps and Artificial Intelligence. I believe that learning Cloud Computing is essential for this transition, and I am constantly seeking new ways to expand my technical and professional knowledge."
-}
+    "info.1": "Hello! My name is Guilherme, I have a degree in Computer Engineering from the State University of Ponta Grossa (UEPG) and work as a full-stack developer. My expertise lies in developing robust backends using C#, while on the frontend I focus on delivering dynamic experiences with JavaScript and React.",
+    "info.2": "I have experience in developing APIs and process automation (RPA) and am currently directing my career towards areas such as MLOps and Artificial Intelligence. I believe that learning Cloud Computing is essential for this transition, and I am continuously seeking new ways to expand my technical and professional knowledge."
+  },
+  "sectionExperience": {
+    "AccordionCloseAll": "Close all",
+    "Experience1": "Systems Programmer",
+    "description1.0": "Development of robust backends using C#",
+    "Experience2": "Technical Resident / Systems Analyst",
+    "description2.0": "Development of robust backends using C#",
+    "Experience3": "Systems Development Intern",
+    "description3.0": "Development of robust backends using C#",
+    "Experience4": "Systems Developer",
+    "description4.0": "Development of robust backends using C#"
+  },
+  "sectionEducation": {
+
+  },
+  "sectionCourses": {
+
+  },
+  "sectionPortfolio": {
+
+  },
+  "sectionAiMl": {
+
+  },
+  "sectionContact": {
+    "notificationClipboard": "Email copied to clipboard!"
+  }
 }

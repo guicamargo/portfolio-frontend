@@ -26,13 +26,29 @@
   },
   "sectionExperience": {
     "AccordionCloseAll":"Fechar tudo",
-    "Experience1": "Desenvolvedor de sistemas",
+    "Experience1": "Programador de sistemas",
     "description1.0": "Desenvolvimento de backends robustos utilizando C#",
-    "Experience2": "Desenvolvedor de sistemas",
+    "Experience2": "Residente técnico / Analista de sistemas",
     "description2.0": "Desenvolvimento de backends robustos utilizando C#",
-    "Experience3": "Desenvolvedor de sistemas",
+    "Experience3": "Estágio em desenvolvimento de sistemas",
     "description3.0": "Desenvolvimento de backends robustos utilizando C#",
     "Experience4": "Desenvolvedor de sistemas",
     "description4.0": "Desenvolvimento de backends robustos utilizando C#"
+  },
+  "sectionEducation":{
+
+  },
+  "sectionCourses":{
+    
+  },
+  "sectionPortfolio":{
+    
+  },
+  "sectionAiMl":{
+    
+  },
+  "sectionContact":{
+    "notificationClipboard": "Email copiado para a área de transferência!"
+    
   }
 }

@@ -9,6 +9,7 @@ const Index = () => {
     <ConteinerSections title={t('nav.courses')} className="coursesContainer">
       <div>
         <p>texto</p>
+        <a href="https://codepen.io/siiron/pen/QWwLoMy">modelo</a>
       </div>
     </ConteinerSections>
   );
