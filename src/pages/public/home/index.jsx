@@ -5,10 +5,10 @@ import { useTranslation } from "react-i18next";
 // import { useAuth } from '../../../context/ThemeContext/index';
 
 import SectionAbout from "../../../components/SectionsHome/Section1-About/index";
-import SectionExperience from "../../../components/SectionsHome/Section2- WorkExperience/index";
-import SectionEducation from "../../../components/SectionsHome/Section3-Education/index";
-import SectionCourses from "../../../components/SectionsHome/Section4-Courses/index";
-import SectionSkills from "../../../components/SectionsHome/Section5-Skills/index";
+import SectionSkills from "../../../components/SectionsHome/Section2-Skills/index";
+import SectionExperience from "../../../components/SectionsHome/Section3-WorkExperience/index";
+import SectionEducation from "../../../components/SectionsHome/Section4-Education/index";
+import SectionCourses from "../../../components/SectionsHome/Section5-Courses/index";
 import SectionPortfolio from "../../../components/SectionsHome/Section6-Portfolio/index";
 import SectionAiMl from "../../../components/SectionsHome/Section7-AiMl/index";
 import SectionContact from "../../../components/SectionsHome/Section8-Contact/index";

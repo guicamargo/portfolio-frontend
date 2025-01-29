@@ -33,10 +33,10 @@ const NavigationButtons = () => {
   // Navigation configuration with labels and authentication requirements
   const navigationConfig = [
     { page: '/', sectionId: 'section1', label: t('nav.about') },
-    { page: '/', sectionId: 'section2', label: t('nav.experience') },
-    { page: '/', sectionId: 'section3', label: t('nav.education') },
-    { page: '/', sectionId: 'section4', label: t('nav.courses') },
-    { page: '/', sectionId: 'section5', label: t('nav.languages') },
+    { page: '/', sectionId: 'section2', label: t('nav.languages') },
+    { page: '/', sectionId: 'section3', label: t('nav.experience') },
+    { page: '/', sectionId: 'section4', label: t('nav.education') },
+    { page: '/', sectionId: 'section5', label: t('nav.courses') },
     { page: '/', sectionId: 'section6', label: t('nav.portfolio') },
     {
       page: '/',
