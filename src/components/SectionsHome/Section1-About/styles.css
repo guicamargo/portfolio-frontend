@@ -3,7 +3,8 @@
     flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
     align-items: flex-start;
     position: relative;
-    padding: 20px 0; /* Adiciona padding vertical para espaçamento */
+
+    padding: 20px 0 0; /* Adiciona padding vertical para espaçamento */
   }
   .profileImage {
     width:95%;
@@ -64,6 +65,7 @@ left: -200px;
   .dark .lastNameContainer {
     color: #ffffff;
   }
+  
   /* Media Queries para responsividade */
   @media screen and (max-width: 950px) {
     .aboutContainer {
@@ -148,4 +150,5 @@ margin-bottom: 0;
     .titleSections {
       font-size: 60px;
     }
+
   }

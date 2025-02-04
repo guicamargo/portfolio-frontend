@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './styles.css';
 
 import ConteinerSections from "../../conteinerSections";
+import CarouselSkills from "../../carouselSkills";
 
 import ImgPerfil from '../../../images/Perfil/IMG_Perfil.JPG';
 
@@ -30,8 +31,10 @@ const Index = () => {
           {t('sectionAbout.info.2')}
         </p>
         </div>
-
       </div>
+        <div className="carouselContainer">
+          <CarouselSkills />
+        </div>
     </ConteinerSections>
   );
 };

@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 // import { useAuth } from '../../../context/ThemeContext/index';
 
 import SectionAbout from "../../../components/SectionsHome/Section1-About/index";
-import SectionSkills from "../../../components/SectionsHome/Section2-Skills/index";
 import SectionExperience from "../../../components/SectionsHome/Section3-WorkExperience/index";
 import SectionEducation from "../../../components/SectionsHome/Section4-Education/index";
 import SectionCourses from "../../../components/SectionsHome/Section5-Courses/index";
@@ -35,9 +34,6 @@ const Home = () => {
       <div style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
         <section id="section1" className="home-section">
           <SectionAbout />
-        </section>
-        <section id="section2" className="home-section">
-          <SectionSkills />
         </section>
         <section id="section3" className="home-section">
           <SectionExperience />
