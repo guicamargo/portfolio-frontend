@@ -73,16 +73,6 @@
   position: relative;
   padding: 20px 0; /* Adiciona padding vertical para espaçamento */
 }
-
-.languagesContainer {
-  display: flex;
-  flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */
-  align-items: flex-start;
-  position: relative;
-  padding: 20px 0; /* Adiciona padding vertical para espaçamento */
-
-}
-
 .portfolioContainer {
   display: flex;
   flex-wrap: wrap; /* Permite que os elementos quebrem em telas menores */

@@ -1,0 +1,187 @@
+.gallery-container {
+    display: flex;
+    min-height: 300px;
+    max-height: 70vh;
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+
+
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Altura do contêiner (50% da altura da viewport) */
+    width: 100%; /* Largura do contêiner (50% da largura da viewport) */
+    overflow: hidden; /* Garante que nada ultrapasse o contêiner */
+  }
+  
+  .image-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vh; /* Ocupa 100% da largura disponível */
+ 
+    background-color: thistle;
+    position: relative; /* Permite posicionar o overlay corretamente */
+  }
+  
+  .image-display img {
+    max-width: 100%; /* Limita a largura máxima ao tamanho do contêiner */
+    max-height: 100%; /* Limita a altura máxima ao tamanho do contêiner */
+    width: auto; /* Ajusta a largura automaticamente para manter a proporção */
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+    object-fit: contain; /* Preserva a proporção da imagem */
+    border-radius: 0.5rem;
+    border: 2px solid #181818;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-link:hover .image-overlay {
+    opacity: 1;
+  }
+  
+  
+  .image-list {
+    width: 500px;
+    margin: 1rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-self: center;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+  
+  .image-button {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: left;
+    border: 2px solid #181818;
+    border-radius: 0.5rem;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto mono";
+    font-weight: 800;
+    font-size: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+  }
+  
+  .image-button:hover {
+    cursor: pointer;
+    background-color: #c4c4c4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-button.active {
+    background-color: #272727;
+    color: white;
+  }
+  
+.dark .image-button{
+  background-color: #000;
+  color: #fff;
+  border-color: #555;
+}
+.dark   .image-button.active {
+  background-color: #d6d6d6;
+  color: #000;
+}
+
+.dark .image-button:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.image-button.active {
+  background-color: #272727;
+  color: white;
+}
+
+@media (min-width: 951px) {
+  .gallery-container {
+      max-height: 70vh; /* Maintain maximum height for larger screens */
+  }
+
+  .image-list {
+      max-height: 500px; /* Set a maximum height for the list */
+      overflow-y: auto; /* Enable vertical scrolling */
+  }
+}
+
+  @media (max-width: 950px) {
+    .gallery-container {
+      flex-direction: column;
+      min-height: auto;
+      max-height: none;
+    }
+  
+    .image-list {
+      width: 100%;
+      max-height: 200px;
+      flex-direction: row;
+      overflow-x: auto;
+    }
+  
+    .image-button {
+      flex: 0 0 auto;
+      width: 250px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .gallery-container {
+      margin: 0.5rem;
+    }
+  
+    .image-list {
+      max-height: 150px;
+    }
+  
+    .image-button {
+      width: 200px;
+      font-size: 12px;
+      padding: 0.3rem;
+    }
+  }
+  .image-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.image-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.image-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.image-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox scrollbar */
+.image-list {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}

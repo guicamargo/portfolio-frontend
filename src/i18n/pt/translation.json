@@ -36,7 +36,12 @@
     "description4.0": "Desenvolvimento de backends robustos utilizando C#"
   },
   "sectionEducation":{
-
+    "TitleEducation1":"Técnico em automação industrial",
+    "DescriptionEducation1": "<strong>Status:</strong> Concluído em fev/2022.\n\n<strong>Instituição:</strong> SENAI -Serviço Nacional de Aprendizagem Industrial, Paraná, Brasil",
+    "TitleEducation2":"Engenharia de Computação",
+    "DescriptionEducation2": "<strong>Status:</strong> Concluído em fev/2022.\n\n<strong>Instituição:</strong> UEPG - Universidade Estadual de Ponta Grossa, Paraná, Brasil",
+    "TitleEducation3":"Pós-graduação em Inovação, trasnformação digital e E-Gov",
+    "DescriptionEducation3": "<strong>Status:</strong> Concluído em fev/2022.\n\n<strong>Instituição:</strong>UNICENTRO - Universidade ESstadual do Centro-Oeste, Paraná, Brasil"
   },
   "sectionCourses":{
     

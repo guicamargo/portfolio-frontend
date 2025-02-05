@@ -1,15 +1,15 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ConteinerSections from "../../conteinerSections";
+import CardEducation from "../../cardEducation";
 import './styles.css';
 
 const Index = () => {
   const { t } = useTranslation();
   return (
     <ConteinerSections title={t('nav.education')} className="educationContainer">
-      <div>
-        <p>texto</p>
-        <a href="https://codepen.io/william-goldsworthy/pen/JzVajj"> modelo</a>
+      <div style={{ height: 'auto' }}>
+        <CardEducation />
       </div>
     </ConteinerSections>
   );
