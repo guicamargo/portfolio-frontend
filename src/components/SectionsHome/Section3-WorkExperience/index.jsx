@@ -13,7 +13,6 @@ const Index = () => {
     "section-1": true,
     "section-2": false,
     "section-3": false,
-    "section-4": false,
   });
 
   const closeAll = () => {
@@ -106,7 +105,7 @@ const Index = () => {
             </div>
           </details>
 
-          <details open={openSections["section-4"]}>
+          {/* <details open={openSections["section-4"]}>
             <summary
               onClick={(e) => {
                 e.preventDefault();
@@ -125,7 +124,7 @@ const Index = () => {
             <div className="accordion-text">
             {t("sectionExperience.description4.0")}
             </div>
-          </details>
+          </details> */}
           <button
             className="close-all-button"
             onClick={closeAll}

@@ -1,0 +1,116 @@
+.cardsWrapper {
+    display: flex;
+    flex-direction: row; /* Cards lado a lado */
+    flex-wrap: wrap; /* Permite que os cards que não couberem quebrem para a linha seguinte */
+    justify-content: center; /* Alinha os cards no centro */
+    padding: 0 0 20px 0;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Título e descrição empilhados */
+    justify-content: space-between; /* Distribui o espaço entre título e descrição */
+    width: 30%;
+    background-color: #e4e4e4;
+    border: 3px solid #2E3033;
+    border-radius: 10px;
+    transition: 0.4s ease-out;
+    position: relative; /* Para o efeito de hover */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Garante que o padding não afete o layout */
+}
+.dark .card {
+    background-color: #2E3033;
+    border: 3px solid #e4e4e4;
+}
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+    transform: translateY(-20px); /* Animação do card quando hover */
+    transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+    position: relative;
+    left: 50px; /* Anima a posição dos cards vizinhos */
+    transition: 0.4s ease-out;
+}
+
+.title {
+    font-family: "roboto mono", sans-serif;
+    color: #000; /* Cor do texto */
+    font-weight: bold;
+    font-size: 18px; /* Tamanho adequado para o título */
+    padding: 5px; /* Espaçamento para não grudar na borda */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+.dark .title {
+    color: #fff;
+}
+.textoDescription {
+    color: #000;
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+    height: auto; /* Garantir que a altura se ajuste ao texto */
+    flex-grow: 1; /* Faz com que o texto ocupe o restante do espaço disponível */
+}
+.dark .textoDescription {
+    color: #fff;
+}
+
+.stroke {
+    stroke: white;
+    stroke-dasharray: 360;
+    stroke-dashoffset: 360;
+    transition: 0.6s ease-out;
+}
+
+.card:hover .stroke {
+    stroke-dashoffset: 100;
+    transition: 0.6s ease-out;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 950px) {
+    .cardsWrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .card {
+        width: 90%; /* Ocupa quase toda a largura da tela */
+        margin: 10px 0; /* Dá um espaçamento entre os cards */
+        gap: 0;
+        left: 0;
+        transition: transform 0.4s ease-out;
+    }
+
+    .card:not(:first-child) {
+        margin-left: 0px;
+        left: 0;
+    }
+
+    /* Faz um zoom ao passar o mouse */
+    .card:hover {
+        transform: scale(1.05); /* Aumenta o tamanho do card */
+        transition: 0.4s ease-out;
+    }
+
+    /* Removemos qualquer movimentação lateral dos outros cards */
+    .card:hover ~ .card {
+        position: static;
+        left: 0;
+        transform: none; /* Impede qualquer movimento lateral */
+        transition: 0.4s ease-out;
+    }
+}
+

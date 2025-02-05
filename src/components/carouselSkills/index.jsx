@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import ConteinerSections from "../../conteinerSections";
 import './styles.scss';
 
 const Index = () => {
@@ -23,7 +22,6 @@ const Index = () => {
   const duplicatedSlides = [...slides, ...slides, ...slides, ...slides];
 
   return (
-    <ConteinerSections title={t('nav.languages')} className="languagesContainer">
       <div className="slider-container">
         <div className="slider">
           <div className="slider-overlay-left" />
@@ -42,7 +40,6 @@ const Index = () => {
           </div>
         </div>
       </div>
-    </ConteinerSections>
   );
 };
 
