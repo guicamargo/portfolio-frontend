@@ -1,12 +1,12 @@
-import React from 'react';
-import './styles.css'; // Importe o arquivo CSS
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import "./styles.css"; // Importe o arquivo CSS
+import { useTranslation } from "react-i18next";
 
 // Ícones (substitua pelos seus próprios ícones ou URLs)
-import iconeFront from '../../images/flag/flag-for-brazil-svgrepo-black.svg';
-import iconeBack from '../../images/flag/flag-for-brazil-svgrepo-black.svg';
-import iconeAI from '../../images/flag/flag-for-brazil-svgrepo-black.svg';
-import iconeServices from '../../images/flag/flag-for-brazil-svgrepo-black.svg';
+import iconeFront from "../../images/icon/web-design.png";
+import iconeBack from "../../images/icon/backend-coding.png";
+import iconeAI from "../../images/icon/machine-learning.png";
+import iconeServices from "../../images/icon/docker.png";
 
 const CarrouselPortfolio = () => {
   const { t } = useTranslation();
@@ -14,29 +14,33 @@ const CarrouselPortfolio = () => {
   // Dados do carrossel
   const datas = [
     {
-      title: t('sectionPortfolio.frontend'),
-      description: t('sectionPortfolio.frontendDescription'),
-      link: 'https://github.com/guicamargo',
-      icone: iconeFront
+      key: "frontend", // Adicione uma chave para facilitar a referência
+      title: t("sectionPortfolio.frontend"),
+      description: t("sectionPortfolio.frontendDescription"),
+      link: "https://github.com/guicamargo",
+      icone: iconeFront,
     },
     {
-      title: t('sectionPortfolio.backend'),
-      description: t('sectionPortfolio.backendDescription'),
-      link: 'https://github.com/guicamargo',
-      icone: iconeBack
+      key: "backend",
+      title: t("sectionPortfolio.backend"),
+      description: t("sectionPortfolio.backendDescription"),
+      link: "https://github.com/guicamargo",
+      icone: iconeBack,
     },
     {
-      title: t('sectionPortfolio.aieml'),
-      description: t('sectionPortfolio.aiemlDescription'),
-      link: 'https://github.com/guicamargo',
-      icone: iconeAI
+      key: "aieml",
+      title: t("sectionPortfolio.aieml"),
+      description: t("sectionPortfolio.aiemlDescription"),
+      link: "https://github.com/guicamargo",
+      icone: iconeAI,
     },
     {
-      title: t('sectionPortfolio.services'),
-      description: t('sectionPortfolio.servicesDescription'),
-      link: 'https://github.com/guicamargo',
-      icone: iconeServices
-    }
+      key: "services",
+      title: t("sectionPortfolio.services"),
+      description: t("sectionPortfolio.servicesDescription"),
+      link: "https://github.com/guicamargo",
+      icone: iconeServices,
+    },
   ];
 
   return (
@@ -53,15 +57,29 @@ const CarrouselPortfolio = () => {
                   value={item.title}
                   defaultChecked={index === 0} // Primeiro item selecionado por padrão
                 />
-                <label htmlFor={`radio_${index}`} className={`label label_${index}`}>
-                  {item.title}
-                </label>
-                <div className={`content content_${index}`}>
-                  <span className="picto" style={{ backgroundImage: `url(${item.icone})` }}></span>
+              <label
+  htmlFor={`radio_${index}`}
+  className={`label label_${item.key}`} // Usa a key para corresponder ao CSS
+  style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}
+>
+  <img 
+    src={item.icone} 
+    alt={`${item.title} icon`} 
+    style={{ width: '48px', height: '48px' }}
+  />
+  {item.title}
+</label>
+
+
+                <div className={`content content_${item.key}`}>
+                  <span
+                    className="picto"
+                    style={{ backgroundImage: `url(${item.icone})` }}
+                  ></span>
                   <h1>{item.title}</h1>
                   <p>{item.description}</p>
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    {t('sectionPortfolio.saibaMais')}
+                    {t("sectionPortfolio.saibaMais")}
                   </a>
                 </div>
               </li>
