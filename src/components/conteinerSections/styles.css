@@ -39,6 +39,7 @@
   border-radius: 5px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 /* Caracteristicas de cada sessão*/

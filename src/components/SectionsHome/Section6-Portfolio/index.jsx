@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ConteinerSections from "../../conteinerSections";
-import CarouselPortfolio from "../../corouselPortfolio/index"
+import CarouselPortfolio from "../../carouselPortfolio/index"
 import './styles.css';
 
 const Index = () => {
@@ -10,7 +10,7 @@ const Index = () => {
     <ConteinerSections title={t('nav.portfolio')} className="portfolioContainer">
 
 
-{/* <CarouselPortfolio/> */}
+<CarouselPortfolio/>
      
     </ConteinerSections>
   );

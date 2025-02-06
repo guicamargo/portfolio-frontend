@@ -47,7 +47,14 @@
     
   },
   "sectionPortfolio":{
-    
+    "frontend": "Frontend",
+    "frontendDescription": "Desenvolvimento de experiências dinâmicas com JavaScript e React",
+    "backend": "Backend",
+    "backendDescription": "Desenvolvimento de APIs e automação de processos (RPA)",
+    "aieml": "Inteligência Artificial e Aprendizado de Máquina",
+    "aiemlDescription": "Desenvolvimento de APIs e automação de processos (RPA)",
+    "services": "Serviços",
+    "servicesDescription": "Desenvolvimento de APIs e automação de processos (RPA)"
   },
   "sectionAiMl":{
     
