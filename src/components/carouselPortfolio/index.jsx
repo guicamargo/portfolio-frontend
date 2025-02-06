@@ -17,7 +17,7 @@ const CarrouselPortfolio = () => {
       key: "frontend", // Adicione uma chave para facilitar a referência
       title: t("sectionPortfolio.frontend"),
       description: t("sectionPortfolio.frontendDescription"),
-      link: "https://github.com/guicamargo",
+      link: "https://github.com/guicamargo/portfolio-frontend",
       icone: iconeFront,
     },
     {
@@ -57,30 +57,43 @@ const CarrouselPortfolio = () => {
                   value={item.title}
                   defaultChecked={index === 0} // Primeiro item selecionado por padrão
                 />
-              <label
-  htmlFor={`radio_${index}`}
-  className={`label label_${item.key}`} // Usa a key para corresponder ao CSS
-  style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}
->
-  <img 
-    src={item.icone} 
-    alt={`${item.title} icon`} 
-    style={{ width: '48px', height: '48px' }}
-  />
-  {item.title}
-</label>
-
+                <label
+                  htmlFor={`radio_${index}`}
+                  className={`label label_${item.key}`} // Usa a key para corresponder ao CSS
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <img
+                    src={item.icone}
+                    alt={`${item.title} icon`}
+                    style={{ width: "48px", height: "48px" }}
+                  />
+                  {item.title}
+                </label>
 
                 <div className={`content content_${item.key}`}>
-                  <span
-                    className="picto"
-                    style={{ backgroundImage: `url(${item.icone})` }}
-                  ></span>
-                  <h1>{item.title}</h1>
-                  <p>{item.description}</p>
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    {t("sectionPortfolio.saibaMais")}
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link"
+                  >
+                    <img
+                      className="picto"
+                      src={item.icone}
+                      alt={`Ícone de ${item.title}`}
+                    />
+                    <h1 style={{ fontFamily: "Roboto mono", margin: "0" }}>
+                      {item.title}
+                    </h1>
                   </a>
+                  <p style={{ fontFamily: "IBM Plex Mono" }}>
+                    {item.description}
+                  </p>
                 </div>
               </li>
             ))}

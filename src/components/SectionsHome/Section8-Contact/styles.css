@@ -32,9 +32,6 @@
 }
   
   
-a {
-    color: transparent !important;
-  }
 
   body {
     background-color: #000;
@@ -66,7 +63,7 @@ a {
     background-color: transparent;
     border: #000 solid 3px;
     border-radius: 28px;
-  
+  color: transparent;
     position: relative;
   }
   .ag-courses-item_link:hover,

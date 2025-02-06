@@ -26,29 +26,36 @@
   },
   "sectionExperience": {
     "AccordionCloseAll":"Fechar tudo",
+
     "Experience1": "Programador de sistemas",
-    "description1.0": "Desenvolvimento de backends robustos utilizando C#",
+    "description1.0": "<strong>Período:</strong> Julho/2014 - Agora\n<strong>Empresa:</strong> FAPEC - Fundação de Apoio à Pesquisa, ao Ensino e à Cultura. \n<strong>Resumo:</strong> Atuei como desenvolvedor Full Stack, utilizando diversas competências e tecnologias. No front-end, utilizei JavaScript, Tailwind CSS, React.js, CSS e HTML para desenvolver sistemas web completos. No back-end, trabalhei com C#, .NET Framework e Microsoft SQL Server para garantir a qualidade e confiabilidade das aplicações. Além disso, realizei a manutenção e melhorias em aplicações existentes, integrando APIs REST e desenvolvendo novas. Minha experiência inclui a criação e gerenciamento de bancos de dados em SQL, bem como a automação de processos robóticos (RPA) para otimizar tarefas repetitivas e aumentar a produtividade. Possuo uma familiaridade básica com o domínio orientado a objetos (DDD).",
+    
     "Experience2": "Residente técnico / Analista de sistemas",
-    "description2.0": "Desenvolvimento de backends robustos utilizando C#",
-    "Experience3": "Estágio em desenvolvimento de sistemas",
-    "description3.0": "Desenvolvimento de backends robustos utilizando C#",
-    "Experience4": "Desenvolvedor de sistemas",
-    "description4.0": "Desenvolvimento de backends robustos utilizando C#"
+    "description2.0": "<strong>Período:</strong> Abril/2022 - Julho/2023\n<strong>Empresa:</strong> SEED/PR - Secretaria Estadual de Educação do Estado do Paraná. \n<strong>Resumo:</strong> Minhas atividades consistiam , atuar no desenvolvimento de aplicações tanto front-end, quanto back-end utilizando React e C# respectivamente suas comunicação com banco de dados SQL, atuei também do planejamento de projetos, com levantamento de requisitos, desenvolvimento de documentação, analise de viabilidade de sistemas.",
+   
+    "Experience3": "Suporte de Rede",
+    "description3.0": "<strong>Período:</strong> Abril/2017 - Abril/2019 e Fevereiro/2021 - Dezembro/2021\n<strong>Empresa:</strong> UEPG - Universidade Estadual de Ponta Grossa. \n<strong>Resumo:</strong> Atuei como responsável por fornecer suporte técnico abrangente a usuários, solucionar dúvidas e problemas, e garantir o bom funcionamento de recursos tecnológicos. Atuação na organização e no suporte técnico de eventos e lives, desde a configuração de equipamentos até a resolução de problemas técnicos. Agendamento e moderação de videoconferências e lives, promovendo a comunicação eficaz. Manutenção preventiva e corretiva dos equipamentos dos estúdios de gravação, assegurando a disponibilidade e o bom desempenho para a produção de conteúdo audiovisual.",
+    
+    "Experience4": "Dev fullstack - Freelancer",
+    "description4.0": "<strong>Período:</strong> Novembro/2020 - Dezembro/2020\n<strong>Empresa:</strong> Yellow Tecnologies. \n<strong>Resumo:</strong> Participei de projetos de desenvolvimento de páginas web, desde o design até a implementação completa (full stack). Também realizei correções de erros no código de aplicações existentes e prestei suporte técnico a clientes. ",
+    
+    "Experience5": "Estágio em desenvolvimento de sistemas",
+    "description5.0": "<strong>Período:</strong> Março/2020 - Julho/2020\n<strong>Empresa:</strong> Vamilly inovações em soluções de TI LTDA. \n<strong>Resumo:</strong> Trabalhei com desenvolvimento web full stack, correção de bugs e suporte ao cliente. "
   },
   "sectionEducation":{
-    "TitleEducation1":"Técnico em automação industrial",
-    "DescriptionEducation1": "<strong>Status:</strong> Concluído em fev/2022.\n\n<strong>Instituição:</strong> SENAI -Serviço Nacional de Aprendizagem Industrial, Paraná, Brasil",
+    "TitleEducation1":"Técnico em automação industrial",                  
+    "DescriptionEducation1": "<strong>Status:</strong> 2014 - 2016 | Concluído \n<strong>Instituição:</strong> SENAI -Serviço Nacional de Aprendizagem Industrial, Paraná, Brasil",
     "TitleEducation2":"Engenharia de Computação",
-    "DescriptionEducation2": "<strong>Status:</strong> Concluído em fev/2022.\n\n<strong>Instituição:</strong> UEPG - Universidade Estadual de Ponta Grossa, Paraná, Brasil",
+    "DescriptionEducation2": "<strong>Status:</strong> 2016 - 2021 | Concluído\n<strong>Instituição:</strong> UEPG - Universidade Estadual de Ponta Grossa, Paraná, Brasil",
     "TitleEducation3":"Pós-graduação em Inovação, trasnformação digital e E-Gov",
-    "DescriptionEducation3": "<strong>Status:</strong> Concluído em fev/2022.\n\n<strong>Instituição:</strong>UNICENTRO - Universidade ESstadual do Centro-Oeste, Paraná, Brasil"
+    "DescriptionEducation3": "<strong>Status:</strong> 2022 - 2024 | Concluído \n<strong>Instituição:</strong>UNICENTRO - Universidade ESstadual do Centro-Oeste, Paraná, Brasil"
   },
   "sectionCourses":{
     
   },
   "sectionPortfolio":{
     "frontend": "Frontend",
-    "frontendDescription": "Desenvolvimento de experiências dinâmicas com JavaScript e React",
+    "frontendDescription": "Desenvolvido com JS, CSS e React, este front-end é a vitrine do meu trabalho. Explore meus projetos e descubra minhas capacidades, aproveitando funcionalidades como dark mode, multi idioma e autenticação (Google e interna). Quer conhecer meu trabalho? Navegue e entre em contato!",
     "backend": "Backend",
     "backendDescription": "Desenvolvimento de APIs e automação de processos (RPA)",
     "aieml": "AI & ML",

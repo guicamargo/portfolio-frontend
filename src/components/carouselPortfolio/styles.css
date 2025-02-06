@@ -1,12 +1,10 @@
-
-.portfolioContainer{
-justify-content: center;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-
+.portfolioContainer {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
+
 .scene {
   display: flex;
   align-items: center;
@@ -14,10 +12,10 @@ justify-content: center;
   width: 1000px;
   height: 400px;
   background-color: #fff;
-
   overflow: hidden;
   position: relative;
 }
+
 
 .left-zone {
   background: #fff;
@@ -53,65 +51,33 @@ justify-content: center;
   padding-left: 70px;
 }
 
-.item input[type="radio"] ~ label:first-letter {
-  text-transform: uppercase;
-}
-
 .item input[type="radio"] ~ label:hover {
   opacity: 0.75;
   cursor: pointer;
 }
 
-.item input[type="radio"] ~ label.label_strawberry:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: 15px;
-  background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/83067-200.png');
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
+.item input[type="radio"]:checked ~ label {
+  opacity: 1;
 }
 
-.item input[type="radio"] ~ label.label_banana:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: 15px;
-  background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/53209-200.png');
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
+.item input[type="radio"]:checked ~ label.label_frontend {
+  color: #F27935;
+  border-right: solid 4px #F27935;
 }
 
-.item input[type="radio"] ~ label.label_apple:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: 15px;
-  background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/14333-200.png');
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
+.item input[type="radio"]:checked ~ label.label_backend {
+  color: #7d3ec5;
+  border-right: solid 4px #7d3ec5;
 }
 
-.item input[type="radio"] ~ label.label_orange:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: 15px;
-  background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/9636-200.png');
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
+.item input[type="radio"]:checked ~ label.label_aieml {
+  color: #d33797;
+  border-right: solid 4px #d33797;
+}
+
+.item input[type="radio"]:checked ~ label.label_services {
+  color: #368bec;
+  border-right: solid 4px #368bec;
 }
 
 .item input[type="radio"] ~ .content {
@@ -129,74 +95,6 @@ justify-content: center;
   flex-direction: column;
 }
 
-.item input[type="radio"] ~ .content.content_frontend .picto {
-  height: 100px;
-  width: 100px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.item input[type="radio"] ~ .content.content_backend .picto {
-  height: 100px;
-  width: 100px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.item input[type="radio"] ~ .content.content_aieml .picto {
-  height: 100px;
-  width: 100px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.item input[type="radio"] ~ .content.content_services .picto {
-  height: 100px;
-  width: 100px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-
-
-.item input[type="radio"] ~ .content h1:first-letter {
-  text-transform: uppercase;
-}
-
-.item input[type="radio"] ~ .content p {
-  max-width: 50%;
-  text-align: center;
-}
-
-.item input[type="radio"]:checked ~ label {
-  opacity: 1;
-}
-
-.item input[type="radio"]:checked ~ label.label_frontend {
-  color: #F27935; /* Vermelho */
-  border-right: solid 4px #F27935;
-}
-
-.item input[type="radio"]:checked ~ label.label_backend {
-  color: #7d3ec5; /* Amarelo */
-  border-right: solid 4px #7d3ec5;
-}
-
-.item input[type="radio"]:checked ~ label.label_aieml {
-  color: #d33797; /* Verde */
-  border-right: solid 4px #d33797;
-}
-
-.item input[type="radio"]:checked ~ label.label_services {
-  color: #368bec; /* Laranja */
-  border-right: solid 4px #368bec;
-}
-
-
 .item input[type="radio"]:checked ~ .content {
   animation-duration: 0.75s;
   animation-name: slidein;
@@ -204,6 +102,18 @@ justify-content: center;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
+.picto {
+  width: 100px;
+  height: 100px;
+  object-fit: contain; /* Mantém a proporção */
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  text-align: center; /* Centraliza o texto */
+}
 .middle-border {
   background-color: #eee;
   height: 75%;
@@ -237,5 +147,25 @@ justify-content: center;
   100% {
     top: -400px;
     opacity: 0;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 950px) {
+  .scene {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .left-zone {
+    width: 100%;
+    height: auto;
+    
+  }
+  .middle-border {
+    display: none;
+  }
+  .right-zone {
+    width: 100%;
   }
 }
