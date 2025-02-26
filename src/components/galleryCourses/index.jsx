@@ -52,6 +52,7 @@ export default function ImageGallery() {
           target="_blank" 
           rel="noopener noreferrer"
           className="image-link"
+          style={{ boxShadow: '0px 0px 0px' }}
         >
           <img 
             src={selectedImage} 

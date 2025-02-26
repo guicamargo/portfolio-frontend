@@ -114,12 +114,15 @@ form {
 
 /* Dark mode styles can be added here if needed */
 .dark .chosen-value {
-  background-color: #333;
+
   color: white;
 }
 
+.dark .value-list li:hover {
+  background-color: #464646;
+}
 .dark .value-list li {
-  background-color: #444;
+
   color: white;
 }
 

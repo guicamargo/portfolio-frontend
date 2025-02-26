@@ -73,11 +73,9 @@ const Header = () => {
       <div className="header-controls">
         <ThemeToggle />
         <LanguageSelector />
-        {isAuthenticated && (
-          <div className="menuAccount">
             <MenuNavBar />
-          </div>
-        )}
+
+
       </div>
     </header>
   );

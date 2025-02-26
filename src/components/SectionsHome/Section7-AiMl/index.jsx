@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ConteinerSections from "../../conteinerSections";
+import DevelopingArea from "../../DevelopingArea";
 import './styles.css';
 
 const Index = () => {
@@ -8,7 +9,7 @@ const Index = () => {
   return (
     <ConteinerSections title={t('nav.aiml')} className="aiMlContainer">
       <div>
-        <p>texto</p>
+      <DevelopingArea/>
       </div>
     </ConteinerSections>
   );

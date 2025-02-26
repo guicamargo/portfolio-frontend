@@ -20,6 +20,12 @@
       "content": "Explore the world of AI and Machine Learning"
     }
   },
+  "Components": {
+    "DevelopingArea": {
+      "title": "Area in Development",
+      "message": "I am working on implementing this feature."
+    }
+  },
   "sectionAbout": {
     "info.1": "Hello! My name is Guilherme, I have a degree in Computer Engineering from the State University of Ponta Grossa (UEPG) and I work as a fullstack developer. My specialty is developing robust backends using C#, while on the frontend I focus on delivering dynamic experiences with JavaScript and React.",
     "info.2": "I have experience in API development and process automation (RPA) and I am currently steering my career towards areas like MLOps and Artificial Intelligence. I believe that learning Cloud Computing is essential for this transition and I am continuously seeking new ways to expand my technical and professional knowledge."

@@ -1,0 +1,105 @@
+.area-desenvolvimento {
+    position: relative;
+    width: 99%;
+    height: 100%;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1.5rem;
+    
+    
+  }
+  
+  .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .icone-engrenagem {
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    animation: girar 4s linear infinite;
+  }
+  
+  .titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .mensagem {
+    font-size: 1.125rem;
+  }
+  
+  .barra-progresso {
+    width: 12rem;
+    height: 0.5rem;
+    background-color: #4b5563;
+    border-radius: 9999px;
+    margin-top: 1rem;
+  }
+  
+  .progresso {
+    height: 0.5rem;
+    background-color: #3b82f6;
+    border-radius: 9999px;
+    width: 33%;
+    animation: pulsar 2s infinite;
+  }
+  
+  .indicador-carregamento {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .ponto {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 9999px;
+    background-color: white;
+    animation: pular 1.5s infinite;
+  }
+  
+  .ponto-delay-1 {
+    animation-delay: 0.2s;
+  }
+  
+  .ponto-delay-2 {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes pulsar {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+  
+  @keyframes pular {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.5rem);
+    }
+  }
