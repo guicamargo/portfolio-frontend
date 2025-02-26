@@ -57,17 +57,18 @@
     "DescriptionEducation3": "<strong>Status:</strong> 2022 - 2024 | Completed\n<strong>Institution:</strong> UNICENTRO - State University of the Midwest, Paraná, Brazil"
   },
   "sectionCourses": {},
-
-  "sectionPortfolio": {
-    "frontend": "Frontend",
-    "frontendDescription": "Developing dynamic experiences with JavaScript and React",
-    "backend": "Backend",
-    "backendDescription": "Developing APIs and process automation (RPA)",
-    "aieml": "AI & ML",
-    "aiemlDescription": "Developing APIs and process automation (RPA)",
-    "services": "Services",
-    "servicesDescription": "Developing APIs and process automation (RPA)"
-  },
+"sectionPortfolio": {
+  "intro": "Introduction",
+  "introDescription": "This portfolio was created to showcase my skills and projects in a structured and interactive manner. \nIt is divided into four main sections: <strong>Frontend</strong>, <strong>Backend</strong>, <strong>Services</strong>, and <strong>Artificial Intelligence</strong>, each highlighting technologies used, challenges faced, and solutions implemented. \nFeel free to explore and learn more about my work. If you have any questions, feel free to get in touch!",
+  "frontend": "Frontend",
+  "frontendDescription": "Developed with JS, CSS, and React, this frontend serves as the showcase of my work. Explore my projects and discover my capabilities, leveraging features such as responsiveness, dark mode, multi-language support, API integration, and authentication (Google and internal).",
+  "backend": "Backend",
+  "backendDescription": "This section focuses on the RESTful API that connects the frontend to the services.\n Using secure JWT authentication and storage in a PostgreSQL database, the backend ensures efficient and secure communication, including integration with Machine Learning services.",
+  "aieml": "AI & ML",
+  "aiemlDescription": "This stage contains examples demonstrating the implementation of Artificial Intelligence and Machine Learning. \nDeveloped and exposed via Flask API, they utilize libraries like Pandas and NumPy for data processing and Scikit-learn for training and inference. \nEverything is containerized with Docker.",
+  "services": "Services",
+  "servicesDescription": "Manages orchestration, database, and deployment. \nPostgreSQL and the Machine Learning service run together in Docker containers, ensuring integration and portability. \nDocker Compose facilitates orchestration, while GitHub Actions automate CI/CD."
+},
 
   "sectionAiMl": {},
 
