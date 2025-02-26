@@ -30,6 +30,9 @@ margin-bottom: 20px;
 .accordion-header h2 {
   margin: 0;
 }
+.accordion-text {
+  white-space: pre-line;
+}
 
 .close-all-button {
     font-family: "roboto mono", sans-serif !important;

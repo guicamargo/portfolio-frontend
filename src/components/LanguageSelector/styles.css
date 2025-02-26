@@ -16,6 +16,7 @@ ul.value-list.open{
   width: 3rem;
   border: transparent;
   border-radius: 5px;
+
 }
 
 
@@ -97,6 +98,7 @@ form {
   cursor: pointer;
   transition: background-color .3s;
   opacity: 1;
+  margin: 1rem 0 1rem 0;
 }
 
 .value-list li:hover {
@@ -112,12 +114,15 @@ form {
 
 /* Dark mode styles can be added here if needed */
 .dark .chosen-value {
-  background-color: #333;
+
   color: white;
 }
 
+.dark .value-list li:hover {
+  background-color: #464646;
+}
 .dark .value-list li {
-  background-color: #444;
+
   color: white;
 }
 
@@ -125,6 +130,7 @@ form {
 .selected-flag {
   width: 2rem;
   cursor: pointer;
+  
 }
 
 .dark .imgFlag,

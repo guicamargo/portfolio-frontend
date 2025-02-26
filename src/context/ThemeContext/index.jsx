@@ -1,22 +1,28 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-// Create a context for the theme state
+// Criando um contexto para o estado do tema
 const ThemeContext = createContext();
 
-// ThemeProvider component to manage the theme state
+// Componente ThemeProvider para gerenciar o estado do tema
 export const ThemeProvider = ({ children }) => {
-  // Initialize darkMode state with false
-  const [darkMode, setDarkMode] = useState(false);
+  // Inicializa o estado com o valor salvo no localStorage ou padrão (false)
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('darkMode') === 'true';
+  });
 
-  // Apply dark mode theme to the body based on darkMode state
+  // Aplica o tema e salva no localStorage quando o estado mudar
   useEffect(() => {
-    document.body.className = darkMode ? 'dark' : '';
+    if (darkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+    localStorage.setItem('darkMode', darkMode);
   }, [darkMode]);
 
-  // Function to toggle the theme state
-  const toggleTheme = () => setDarkMode(!darkMode);
+  // Função para alternar o tema
+  const toggleTheme = () => setDarkMode((prevMode) => !prevMode);
 
-  // Provide the darkMode state and toggleTheme function to children components
   return (
     <ThemeContext.Provider value={{ darkMode, toggleTheme }}>
       {children}
@@ -24,12 +30,11 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-// Custom hook to access the theme context
+// Hook personalizado para acessar o contexto do tema
 export const useTheme = () => {
   const context = useContext(ThemeContext);
-  // Throw an error if useTheme is not used within a ThemeProvider
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error('useTheme deve ser usado dentro de um ThemeProvider');
   }
   return context;
 };

@@ -1,9 +1,7 @@
-import React, { useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+import React, { useState } from "react";
+import { useTranslation, Trans } from "react-i18next";
 import ConteinerSections from "../../conteinerSections";
-import { ChevronUp } from "lucide-react";
-import { ChevronDown } from "lucide-react";
-import { CornerRightUp } from "lucide-react";
+import { ChevronUp, ChevronDown, CornerRightUp } from "lucide-react";
 
 import "./styles.css";
 
@@ -15,9 +13,37 @@ const Index = () => {
     "section-3": false,
   });
 
+  const sections = [
+    {
+      id: "section-1",
+      titleKey: "sectionExperience.Experience1",
+      descriptionKey: "sectionExperience.description1.0"
+    },
+    {
+      id: "section-2",
+      titleKey: "sectionExperience.Experience2",
+      descriptionKey: "sectionExperience.description2.0"
+    },
+    {
+      id: "section-3",
+      titleKey: "sectionExperience.Experience3",
+      descriptionKey: "sectionExperience.description3.0"
+    },
+    {
+      id: "section-4",
+      titleKey: "sectionExperience.Experience4",
+      descriptionKey: "sectionExperience.description4.0"
+    },
+    {
+      id: "section-5",
+      titleKey: "sectionExperience.Experience5",
+      descriptionKey: "sectionExperience.description5.0"
+    }
+  ];
+
   const closeAll = () => {
-    const allClosed = Object.keys(openSections).reduce((acc, key) => {
-      acc[key] = false;
+    const allClosed = sections.reduce((acc, section) => {
+      acc[section.id] = false;
       return acc;
     }, {});
     setOpenSections(allClosed);
@@ -38,99 +64,36 @@ const Index = () => {
       className="experienceContainer"
     >
       <div className="accordion-container">
-        <div className="accordion-header">
-        </div>
         <div className="accordion">
-          <details open={openSections["section-1"]}>
-            <summary
-              onClick={(e) => {
-                e.preventDefault();
-                toggleSection("section-1");
-              }}
-            >
-              <span className="icon-wrapper">
-                {openSections["section-1"] ? (
-                  <ChevronUp size={18} />
-                ) : (
-                  <ChevronDown size={18} />
-                )}
-              </span>
-              {t("sectionExperience.Experience1")}
-            </summary>
-            <div className="accordion-text">
-            {t("sectionExperience.description1.0")}
-             
-            </div>
-          </details>
+          {sections.map((section) => (
+            <details key={section.id} open={openSections[section.id]}>
+              <summary
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleSection(section.id);
+                }}
+              >
+                <span className="icon-wrapper">
+                  {openSections[section.id] ? (
+                    <ChevronUp size={18} />
+                  ) : (
+                    <ChevronDown size={18} />
+                  )}
+                </span>
+                <Trans i18nKey={section.titleKey} />
+              </summary>
+              <div className="accordion-text">
+                <Trans i18nKey={section.descriptionKey} />
+              </div>
+            </details>
+          ))}
 
-          <details open={openSections["section-2"]}>
-            <summary
-              onClick={(e) => {
-                e.preventDefault();
-                toggleSection("section-2");
-              }}
-            >
-              <span className="icon-wrapper">
-                {openSections["section-2"] ? (
-                  <ChevronUp size={18} />
-                ) : (
-                  <ChevronDown size={18} />
-                )}
-              </span>
-              {t("sectionExperience.Experience2")}
-            </summary>
-            <div className="accordion-text">
-            {t("sectionExperience.description2.0")}
-            </div>
-          </details>
-
-          <details open={openSections["section-3"]}>
-            <summary
-              onClick={(e) => {
-                e.preventDefault();
-                toggleSection("section-3");
-              }}
-            >
-              <span className="icon-wrapper">
-                {openSections["section-3"] ? (
-                  <ChevronUp size={18} />
-                ) : (
-                  <ChevronDown size={18} />
-                )}
-              </span>
-              {t("sectionExperience.Experience3")}
-            </summary>
-            <div className="accordion-text">
-            {t("sectionExperience.description3.0")}
-            </div>
-          </details>
-
-          {/* <details open={openSections["section-4"]}>
-            <summary
-              onClick={(e) => {
-                e.preventDefault();
-                toggleSection("section-4");
-              }}
-            >
-              <span className="icon-wrapper">
-                {openSections["section-4"] ? (
-                  <ChevronUp size={18} />
-                ) : (
-                  <ChevronDown size={18} />
-                )}
-              </span>
-              {t("sectionExperience.Experience4")}
-            </summary>
-            <div className="accordion-text">
-            {t("sectionExperience.description4.0")}
-            </div>
-          </details> */}
           <button
             className="close-all-button"
             onClick={closeAll}
             disabled={!isAnyOpen}
           >
-            {t("sectionExperience.AccordionCloseAll")} <CornerRightUp size={18} />
+            <Trans i18nKey="sectionExperience.AccordionCloseAll" /> <CornerRightUp size={18} />
           </button>
         </div>
       </div>

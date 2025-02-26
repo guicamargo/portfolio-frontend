@@ -4,6 +4,7 @@
     flex-wrap: wrap; /* Permite que os cards que não couberem quebrem para a linha seguinte */
     justify-content: center; /* Alinha os cards no centro */
     padding: 0 0 20px 0;
+    gap: 20px;
 
 }
 
@@ -82,6 +83,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 1rem;
     }
 }
 

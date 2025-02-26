@@ -6,7 +6,7 @@
     "experience": "Experience",
     "education": "Education",
     "courses": "Courses",
-    "languages": "Languages",
+    "Languages": "Languages",
     "portfolio": "Portfolio",
     "aiml": "AI & ML",
     "contact": "Contact",
@@ -20,33 +20,57 @@
       "content": "Explore the world of AI and Machine Learning"
     }
   },
+  "Components": {
+    "DevelopingArea": {
+      "title": "Area in Development",
+      "message": "I am working on implementing this feature."
+    }
+  },
   "sectionAbout": {
-    "info.1": "Hello! My name is Guilherme, I have a degree in Computer Engineering from the State University of Ponta Grossa (UEPG) and work as a full-stack developer. My expertise lies in developing robust backends using C#, while on the frontend I focus on delivering dynamic experiences with JavaScript and React.",
-    "info.2": "I have experience in developing APIs and process automation (RPA) and am currently directing my career towards areas such as MLOps and Artificial Intelligence. I believe that learning Cloud Computing is essential for this transition, and I am continuously seeking new ways to expand my technical and professional knowledge."
+    "info.1": "Hello! My name is Guilherme, I have a degree in Computer Engineering from the State University of Ponta Grossa (UEPG) and I work as a fullstack developer. My specialty is developing robust backends using C#, while on the frontend I focus on delivering dynamic experiences with JavaScript and React.",
+    "info.2": "I have experience in API development and process automation (RPA) and I am currently steering my career towards areas like MLOps and Artificial Intelligence. I believe that learning Cloud Computing is essential for this transition and I am continuously seeking new ways to expand my technical and professional knowledge."
   },
   "sectionExperience": {
     "AccordionCloseAll": "Close all",
+
     "Experience1": "Systems Programmer",
-    "description1.0": "Development of robust backends using C#",
+    "description1.0": "<strong>Period:</strong> July/2014 - Present\n<strong>Company:</strong> FAPEC - Foundation for Support to Research, Teaching, and Culture.\n<strong>Summary:</strong> I worked as a Full Stack developer, utilizing various skills and technologies. On the front-end, I used JavaScript, Tailwind CSS, React.js, CSS, and HTML to develop complete web systems. On the back-end, I worked with C#, .NET Framework, and Microsoft SQL Server to ensure the quality and reliability of the applications. Additionally, I maintained and improved existing applications, integrated REST APIs, and developed new ones. My experience includes creating and managing SQL databases, as well as robotic process automation (RPA) to optimize repetitive tasks and increase productivity. I have basic familiarity with domain-driven design (DDD).",
+
     "Experience2": "Technical Resident / Systems Analyst",
-    "description2.0": "Development of robust backends using C#",
-    "Experience3": "Systems Development Intern",
-    "description3.0": "Development of robust backends using C#",
-    "Experience4": "Systems Developer",
-    "description4.0": "Development of robust backends using C#"
+    "description2.0": "<strong>Period:</strong> April/2022 - July/2023\n<strong>Company:</strong> SEED/PR - State Department of Education of Paraná.\n<strong>Summary:</strong> My activities involved developing both front-end and back-end applications using React and C#, respectively, and their communication with SQL databases. I also participated in project planning, requirement gathering, documentation development, and system feasibility analysis.",
+
+    "Experience3": "Network Support",
+    "description3.0": "<strong>Period:</strong> April/2017 - April/2019 and February/2021 - December/2021\n<strong>Company:</strong> UEPG - State University of Ponta Grossa.\n<strong>Summary:</strong> I was responsible for providing comprehensive technical support to users, solving issues and ensuring the smooth operation of technological resources. I organized and provided technical support for events and live streams, from equipment setup to troubleshooting. I scheduled and moderated videoconferences and live sessions, promoting effective communication. I also performed preventive and corrective maintenance on recording studio equipment to ensure availability and optimal performance for audiovisual content production.",
+
+    "Experience4": "Fullstack Developer - Freelancer",
+    "description4.0": "<strong>Period:</strong> November/2020 - December/2020\n<strong>Company:</strong> Yellow Technologies.\n<strong>Summary:</strong> I participated in web page development projects, from design to full implementation (full stack). I also performed bug fixes in existing applications and provided technical support to clients.",
+
+    "Experience5": "Systems Development Intern",
+    "description5.0": "<strong>Period:</strong> March/2020 - July/2020\n<strong>Company:</strong> Vamilly Innovations in IT Solutions LTDA.\n<strong>Summary:</strong> I worked with full stack web development, bug fixing, and customer support."
   },
   "sectionEducation": {
-
+    "TitleEducation1": "Technical Degree in Industrial Automation",
+    "DescriptionEducation1": "<strong>Status:</strong> 2014 - 2016 | Completed\n<strong>Institution:</strong> SENAI - National Service for Industrial Training, Paraná, Brazil",
+    "TitleEducation2": "Computer Engineering",
+    "DescriptionEducation2": "<strong>Status:</strong> 2016 - 2021 | Completed\n<strong>Institution:</strong> UEPG - State University of Ponta Grossa, Paraná, Brazil",
+    "TitleEducation3": "Postgraduate in Innovation, Digital Transformation, and E-Gov",
+    "DescriptionEducation3": "<strong>Status:</strong> 2022 - 2024 | Completed\n<strong>Institution:</strong> UNICENTRO - State University of the Midwest, Paraná, Brazil"
   },
-  "sectionCourses": {
+  "sectionCourses": {},
 
-  },
   "sectionPortfolio": {
-
+    "frontend": "Frontend",
+    "frontendDescription": "Developing dynamic experiences with JavaScript and React",
+    "backend": "Backend",
+    "backendDescription": "Developing APIs and process automation (RPA)",
+    "aieml": "AI & ML",
+    "aiemlDescription": "Developing APIs and process automation (RPA)",
+    "services": "Services",
+    "servicesDescription": "Developing APIs and process automation (RPA)"
   },
-  "sectionAiMl": {
 
-  },
+  "sectionAiMl": {},
+
   "sectionContact": {
     "notificationClipboard": "Email copied to clipboard!"
   }
