@@ -145,8 +145,13 @@ body {
     flex-basis: calc(25% - 30px);
     max-width: 180px; /* Ajustado para telas menores */
   }
+  .ag-courses_item_link {
+    -ms-flex-preferred-size: calc(25% - 30px);
+    flex-basis: calc(25% - 30px);
+    max-width: 180px; /* Ajustado para telas menores */
+  }
   .ag-courses-item_title {
-    font-size: 24px;
+    font-size: 20px;
   }
   .ag-format-container {
     width: 96%;
@@ -156,6 +161,9 @@ body {
 @media only screen and (max-width: 767px) {
   .ag-format-container {
     width: 96%;
+  }
+  .ag-courses-item_title {
+    font-size: 20px;
   }
   .ag-courses_item {
     -ms-flex-preferred-size: calc(33.33% - 30px);
@@ -176,10 +184,13 @@ body {
     font-size: 20px; /* Reduz um pouco para telas pequenas */
   }
   .ag-courses-item_link {
-    padding: 22px 20px; /* Reduzido padding horizontal */
+   
   }
   .ag-format-container {
     width: 96%;
     min-height: 500px;
+  }
+  .ag-courses-item_title {
+    font-size: 15px;
   }
 }

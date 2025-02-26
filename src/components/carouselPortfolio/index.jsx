@@ -18,7 +18,7 @@ const CarrouselPortfolio = () => {
       key: "intro", // Adicione uma chave para facilitar a referência
       title: t("sectionPortfolio.intro"),
       description: t("sectionPortfolio.introDescription"),
-      link: "",
+      link: "https://github.com/guicamargo/",
       icone: iconeInfo,
     },
     {
