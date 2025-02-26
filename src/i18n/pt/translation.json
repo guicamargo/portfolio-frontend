@@ -60,14 +60,16 @@
     
   },
   "sectionPortfolio":{
+    "intro": "Introdução",
+    "introDescription": "Este portfólio foi criado para apresentar minhas habilidades e projetos de maneira estruturada e interativa. \nEle está dividido em quatro seções principais: <strong>Frontend</strong>, <strong>Backend</strong>, <strong>Serviços</strong> e <strong>Inteligência Artificial</strong>, cada uma destacando tecnologias utilizadas, desafios enfrentados e soluções implementadas. \nSinta-se à vontade para explorar e conhecer mais sobre meu trabalho. Caso tenha dúvidas,  entre em contato!",
     "frontend": "Frontend",
-    "frontendDescription": "Desenvolvido com JS, CSS e React, este front-end é a vitrine do meu trabalho. Explore meus projetos e descubra minhas capacidades, aproveitando funcionalidades como dark mode, multi idioma e autenticação (Google e interna). Quer conhecer meu trabalho? Navegue e entre em contato!",
+    "frontendDescription": "Desenvolvido com JS, CSS e React, este front-end é a vitrine do meu trabalho. Explore meus projetos e descubra minhas capacidades, aproveitando funcionalidades como responsividade, dark mode, multi idioma, integração com APIs e autenticação (Google e interna).",
     "backend": "Backend",
-    "backendDescription": "Desenvolvimento de APIs e automação de processos (RPA)",
+    "backendDescription": "Esta seção concentra a API RESTful que conecta o front-end aos serviços.\n Utilizando autenticação segura via JWT e armazenamento em um banco de dados PostgreSQL, o backend garante uma comunicação eficiente e segura, incluindo integração com serviços de Machine Learning.",
     "aieml": "AI & ML",
-    "aiemlDescription": "Desenvolvimento de APIs e automação de processos (RPA)",
+    "aiemlDescription": "Esta etapa contém exemplo que demonstram a implementação de inteligência Artificial e Machine Learning. \nDesenvolvidos e expostos via API Flask, eles utilizam Bibliotecas como Pandas e NumPy para processamento de dados e Scikit-learn para treinamento e inferência. \nTudo é containerizado com Docker.",
     "services": "Serviços",
-    "servicesDescription": "Desenvolvimento de APIs e automação de processos (RPA)"
+    "servicesDescription": "Gerencia a orquestração, banco de dados e deploy. \nO PostgreSQL e o serviço de Machine Learning rodam juntos em contêineres Docker, garantindo integração e portabilidade. \nDocker Compose facilita a orquestração, enquanto GitHub Actions automatiza CI/CD."
   },
   "sectionAiMl":{
     

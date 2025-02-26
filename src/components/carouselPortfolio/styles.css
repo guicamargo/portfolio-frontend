@@ -36,6 +36,12 @@
   margin: 0;
   padding: 0;
 }
+.infoText {
+width: 96%;
+  }
+.infoTextDescription {
+font-size: 15px;
+}
 
 .item input[type="radio"] {
   display: none;
@@ -60,11 +66,14 @@
   opacity: 1;
 }
 
+.item input[type="radio"]:checked ~ label.label_intro {
+  color: #35ccf2;
+  border-right: solid 4px #35ccf2;
+}
 .item input[type="radio"]:checked ~ label.label_frontend {
   color: #F27935;
   border-right: solid 4px #F27935;
 }
-
 .item input[type="radio"]:checked ~ label.label_backend {
   color: #7d3ec5;
   border-right: solid 4px #7d3ec5;

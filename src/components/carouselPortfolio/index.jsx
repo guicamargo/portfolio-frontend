@@ -3,6 +3,7 @@ import "./styles.css"; // Importe o arquivo CSS
 import { useTranslation } from "react-i18next";
 
 // Ícones (substitua pelos seus próprios ícones ou URLs)
+import iconeInfo from "../../images/icon/information.png";
 import iconeFront from "../../images/icon/web-design.png";
 import iconeBack from "../../images/icon/backend-coding.png";
 import iconeAI from "../../images/icon/machine-learning.png";
@@ -13,6 +14,13 @@ const CarrouselPortfolio = () => {
 
   // Dados do carrossel
   const datas = [
+    {
+      key: "intro", // Adicione uma chave para facilitar a referência
+      title: t("sectionPortfolio.intro"),
+      description: t("sectionPortfolio.introDescription"),
+      link: "",
+      icone: iconeInfo,
+    },
     {
       key: "frontend", // Adicione uma chave para facilitar a referência
       title: t("sectionPortfolio.frontend"),
@@ -42,6 +50,29 @@ const CarrouselPortfolio = () => {
       icone: iconeServices,
     },
   ];
+
+const formatTextWithBreaksAndBold = (text) => {
+  // Substitui as quebras de linha (\n) por <br />
+  const formattedText = text.split('\n').map((line, index) => (
+    <React.Fragment key={index}>
+      {/* Substitui as tags <strong> no texto e aplica o negrito */}
+      {line.split('<strong>').map((part, partIndex) => {
+        if (partIndex === 0) {
+          return part; // Texto normal
+        }
+        const [boldText, rest] = part.split('</strong>');
+        return (
+          <>
+            <strong>{boldText}</strong>{rest}
+          </>
+        );
+      })}
+      <br />
+    </React.Fragment>
+  ));
+
+  return formattedText;
+};
 
   return (
     <div className="portfolioContainer">
@@ -81,6 +112,8 @@ const CarrouselPortfolio = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link"
+                    style={{ boxShadow: "0px 0px 0px" }}
+                      title="Acessar o repositório"
                   >
                     <img
                       className="picto"
@@ -91,9 +124,11 @@ const CarrouselPortfolio = () => {
                       {item.title}
                     </h1>
                   </a>
-                  <p style={{ fontFamily: "IBM Plex Mono" }}>
-                    {item.description}
+                  <div className="infoText">
+                  <p className="infoTextDescription" style={{ fontFamily: "IBM Plex Mono" }}>
+                    {formatTextWithBreaksAndBold(item.description)}
                   </p>
+                  </div>
                 </div>
               </li>
             ))}
