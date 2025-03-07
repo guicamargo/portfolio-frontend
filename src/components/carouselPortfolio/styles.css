@@ -1,3 +1,4 @@
+
 .portfolioContainer {
   justify-content: center;
   width: 100%;
@@ -15,16 +16,23 @@
   overflow: hidden;
   position: relative;
 }
+.dark .scene {
+  background: #000;
+}
 
 
 .left-zone {
   background: #fff;
-  height: 75%;
+  height: 0%;
   flex-grow: 0;
   display: flex;
   width: 350px;
   align-items: center;
   justify-content: left;
+}
+
+.dark .left-zone {
+  background: #000;
 }
 
 .list {
@@ -35,7 +43,18 @@
   flex-grow: 1;
   margin: 0;
   padding: 0;
-}
+  
+} 
+/* .list {
+  display: flex;
+  list-style: none;
+  align-content: stretch;
+  flex-direction: row; 
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+} */
+
 .infoText {
 width: 96%;
   }
@@ -55,6 +74,7 @@ font-size: 15px;
   line-height: 50px;
   position: relative;
   padding-left: 70px;
+  
 }
 
 .item input[type="radio"] ~ label:hover {
@@ -65,7 +85,6 @@ font-size: 15px;
 .item input[type="radio"]:checked ~ label {
   opacity: 1;
 }
-
 .item input[type="radio"]:checked ~ label.label_intro {
   color: #35ccf2;
   border-right: solid 4px #35ccf2;
@@ -73,22 +92,20 @@ font-size: 15px;
 .item input[type="radio"]:checked ~ label.label_frontend {
   color: #F27935;
   border-right: solid 4px #F27935;
+  margin-left: 10px;
 }
 .item input[type="radio"]:checked ~ label.label_backend {
   color: #7d3ec5;
   border-right: solid 4px #7d3ec5;
 }
-
 .item input[type="radio"]:checked ~ label.label_aieml {
   color: #d33797;
   border-right: solid 4px #d33797;
 }
-
 .item input[type="radio"]:checked ~ label.label_services {
   color: #368bec;
   border-right: solid 4px #368bec;
 }
-
 .item input[type="radio"] ~ .content {
   position: absolute;
   left: 350px;
@@ -116,7 +133,9 @@ font-size: 15px;
   height: 100px;
   object-fit: contain; /* Mantém a proporção */
 }
-
+.dark .picto {
+  filter: invert(1);
+}
 .link {
   display: flex;
   flex-direction: column;
@@ -130,13 +149,18 @@ font-size: 15px;
   max-width: 2px;
   z-index: 0;
 }
-
+.dark .middle-border {
+  background: #000;
+}
 .right-zone {
   background: #fff;
   height: 100%;
   flex-grow: 3;
 }
 
+.dark .right-zone {
+  background: #000;
+}
 @keyframes slidein {
   0% {
     top: -400px;
@@ -160,21 +184,178 @@ font-size: 15px;
 }
 
 /* Responsividade */
-@media (max-width: 950px) {
+
+@media screen and (max-width: 560px)  {
+  .right-zone {
+    min-height: 500px !important; /* Altura mínima para conteúdos pequenos */
+  }
+}
+@media screen and (max-width: 1018px) {
+
+  .item input[type="radio"] ~ label {
+    padding-left: 10px !important;
+  }
+  
   .scene {
     width: 100%;
-    height: auto;
     flex-direction: column;
+    height: auto; /* Permite expandir conforme necessário */
+    min-height: auto; /* Remove a altura mínima fixa */
+    position: relative;
   }
+  
   .left-zone {
     width: 100%;
     height: auto;
-    
+    order: 1;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 10;
+    background: #fff;
   }
+  
+  .dark .left-zone {
+    background: #000;
+  }
+  
+  .list {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 15px;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+  }
+  
+  .list::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .list::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+  }
+  
+  .list .item {
+    flex: 0 0 auto;
+  }
+  
   .middle-border {
     display: none;
   }
+  
   .right-zone {
     width: 100%;
+    height: auto; /* Altura automática */
+    min-height: 400px; /* Altura mínima para conteúdos pequenos */
+    order: 2;
+    position: relative;
+    margin-bottom: 20px; /* Espaço no final da página */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Manter position absolute para o conteúdo, mas ajustar posição */
+  .item input[type="radio"] ~ .content {
+    position: relative; /* Muda para relative para não sair do fluxo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    display: none;
+    box-sizing: border-box;
+    padding: 20px 15px; /* Mais espaço em volta do conteúdo */
+    margin-top: 20px; /* Espaço entre a navegação e o conteúdo */
+  }
+
+  /* Mostrar apenas o conteúdo do item selecionado */
+  .item input[type="radio"]:checked ~ .content {
+    display: flex; /* Mostra apenas o selecionado */
+    animation-name: slidein;
+  }
+  
+  /* Ajustar as animações */
+  @keyframes slidein {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideout {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+      display: none;
+    }
+  }
+  
+  /* Remover as bordas laterais */
+  .item input[type="radio"]:checked ~ label.label_intro,
+  .item input[type="radio"]:checked ~ label.label_frontend,
+  .item input[type="radio"]:checked ~ label.label_backend,
+  .item input[type="radio"]:checked ~ label.label_aieml,
+  .item input[type="radio"]:checked ~ label.label_services {
+    border-right: none;
+    /* Indicador visual alternativo */
+    border-bottom: solid 3px currentColor;
+  }
+  .infoText {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px; /* Adiciona um padding lateral */
+    box-sizing: border-box;
+  }
+  
+  .infoTextDescription {
+    font-size: 15px;
+    white-space: normal; /* Garante que o texto quebre */
+    word-wrap: break-word; /* Força quebra de palavras longas */
+    overflow-wrap: break-word;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Garantir que o conteúdo se ajuste corretamente */
+  .item input[type="radio"] ~ .content {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    display: none;
+    box-sizing: border-box;
+    padding: 0 10px; /* Adiciona padding para não ficar colado nas bordas */
+  }
+  
+  /* Ajuste para os parágrafos e outros elementos de texto */
+  .content p, .content h1, .content h2, .content h3, 
+  .content div, .content span {
+    max-width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* Garantir que o React.Fragment com o texto formatado quebre linha */
+  .infoTextDescription br {
+    display: block; /* Garante que as quebras de linha funcionem */
   }
 }

@@ -99,11 +99,14 @@ const formatTextWithBreaksAndBold = (text) => {
                   }}
                 >
                   <img
+                    className="picto"
                     src={item.icone}
                     alt={`${item.title} icon`}
                     style={{ width: "48px", height: "48px" }}
                   />
-                  {item.title}
+
+                   <span className="title">{item.title}</span>
+
                 </label>
 
                 <div className={`content content_${item.key}`}>
