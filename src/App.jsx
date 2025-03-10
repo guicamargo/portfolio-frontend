@@ -7,9 +7,9 @@ import ParticlesComponent from './components/background/index';
 const App = () => {
   return (
     <>
+    
     <BrowserRouter>
       <ThemeProvider>
-        
             <ParticlesComponent id="tsparticles" />
         <AppRoutes />
       </ThemeProvider>

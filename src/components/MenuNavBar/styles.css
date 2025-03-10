@@ -102,6 +102,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: Adiciona sombra */
   }
 
+  .textcenter {
+    text-align: center;
+    font-size: small;
+  }
+
   ul.mt-4 {
     padding: 2px;
     margin: 5px;
