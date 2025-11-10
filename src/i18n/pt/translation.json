@@ -54,7 +54,9 @@
     "TitleEducation2":"Engenharia de Computação",
     "DescriptionEducation2": "<strong>Status:</strong> 2016 - 2021 | Concluído\n<strong>Instituição:</strong> UEPG - Universidade Estadual de Ponta Grossa, Paraná, Brasil",
     "TitleEducation3":"Pós-graduação em Inovação, trasnformação digital e E-Gov",
-    "DescriptionEducation3": "<strong>Status:</strong> 2022 - 2024 | Concluído \n<strong>Instituição:</strong>UNICENTRO - Universidade ESstadual do Centro-Oeste, Paraná, Brasil"
+    "DescriptionEducation3": "<strong>Status:</strong> 2022 - 2024 | Concluído \n<strong>Instituição:</strong>UNICENTRO - Universidade ESstadual do Centro-Oeste, Paraná, Brasil",
+    "TitleEducation4":"Pós-graduação em DevOps e Arquitetura Cloud",
+    "DescriptionEducation4": "<strong>Status:</strong> 2025 - 2026 | Em Andamento \n<strong>Instituição:</strong>FIAP - Faculdade de Informática e Administração Paulista, São Paulo, Brasil"
   },
   "sectionCourses":{
     

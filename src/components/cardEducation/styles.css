@@ -1,118 +1,137 @@
-.cardsWrapper {
-    display: flex;
-    flex-direction: row; /* Cards lado a lado */
-    flex-wrap: wrap; /* Permite que os cards que não couberem quebrem para a linha seguinte */
-    justify-content: center; /* Alinha os cards no centro */
-    padding: 0 0 20px 0;
-    gap: 20px;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
 
+* {
+  box-sizing: border-box;
 }
 
-.card {
-    display: flex;
-    flex-direction: column; /* Título e descrição empilhados */
-    justify-content: space-between; /* Distribui o espaço entre título e descrição */
-    width: 30%;
-    background-color: #e4e4e4;
-    border: 3px solid #2E3033;
-    border-radius: 10px;
-    transition: 0.4s ease-out;
-    position: relative; /* Para o efeito de hover */
-    padding: 20px; /* Espaçamento interno */
-    box-sizing: border-box; /* Garante que o padding não afete o layout */
-}
-.dark .card {
-    background-color: #2E3033;
-    border: 3px solid #e4e4e4;
-}
-.card:not(:first-child) {
-    margin-left: -50px;
+/* === CONTAINER COM SCROLL === */
+.cardsScrollContainer {
+  max-height: 40vh; /* Altura máxima da área */
+  overflow-y: auto; /* Scroll vertical */
+  overflow-x: hidden;
+  padding: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f0f0f0;
+  scroll-behavior: smooth;
+  margin: 0 auto;
 }
 
-.card:hover {
-    transform: translateY(-20px); /* Animação do card quando hover */
-    transition: 0.4s ease-out;
+/* Personalização da barra de rolagem */
+.cardsScrollContainer::-webkit-scrollbar {
+  width: 8px;
+}
+.cardsScrollContainer::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+.cardsScrollContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.cardsScrollContainer::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
 
-.card:hover ~ .card {
-    position: relative;
-    left: 50px; /* Anima a posição dos cards vizinhos */
-    transition: 0.4s ease-out;
+/* === LISTA E CARDS === */
+.cardsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: list;
 }
 
-.title {
-    font-family: "roboto mono", sans-serif;
-    color: #000; /* Cor do texto */
-    font-weight: bold;
-    font-size: 18px; /* Tamanho adequado para o título */
-    padding: 5px; /* Espaçamento para não grudar na borda */
-    border-radius: 5px;
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
-}
-.dark .title {
-    color: #fff;
-}
-.textoDescription {
-    color: #000;
-    font-family: "IBM Plex Mono", sans-serif;
-    font-size: 14px;
-    margin-top: 10px;
-    height: auto; /* Garantir que a altura se ajuste ao texto */
-    flex-grow: 1; /* Faz com que o texto ocupe o restante do espaço disponível */
-}
-.dark .textoDescription {
-    color: #fff;
+.cardsList li {
+  --stop: calc(100% / var(--length) * var(--i));
+  --l: 62%;
+  --l2: 88%;
+  --h: calc((var(--i) - 1) * (180 / var(--length)));
+  --c1: hsl(var(--h), 71%, var(--l));
+  --c2: hsl(var(--h), 71%, var(--l2));
+
+  position: relative;
+  max-width: 45rem;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem 1rem;
+  box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  background-color: white;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 8px solid var(--c1);
 }
 
-.stroke {
-    stroke: white;
-    stroke-dasharray: 360;
-    stroke-dashoffset: 360;
-    transition: 0.6s ease-out;
+/* Linha colorida no topo */
+.cardsList li::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
 }
 
-.card:hover .stroke {
-    stroke-dashoffset: 100;
-    transition: 0.6s ease-out;
+/* Hover */
+.cardsList li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0.2rem 0.2rem 1.8rem rgba(0, 0, 0, 0.4);
 }
 
-/* Responsividade para telas menores */
-@media screen and (max-width: 950px) {
-    .cardsWrapper {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 1rem;
-    }
+/* === TEXTOS === */
+.cardsList h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 650px) {
-    .card {
-        width: 90%; /* Ocupa quase toda a largura da tela */
-        margin: 10px 0; /* Dá um espaçamento entre os cards */
-        gap: 0;
-        left: 0;
-        transition: transform 0.4s ease-out;
-    }
-
-    .card:not(:first-child) {
-        margin-left: 0px;
-        left: 0;
-    }
-
-    /* Faz um zoom ao passar o mouse */
-    .card:hover {
-        transform: scale(1.05); /* Aumenta o tamanho do card */
-        transition: 0.4s ease-out;
-    }
-
-    /* Removemos qualquer movimentação lateral dos outros cards */
-    .card:hover ~ .card {
-        position: static;
-        left: 0;
-        transform: none; /* Impede qualquer movimento lateral */
-        transition: 0.4s ease-out;
-    }
+.cardsList p {
+  font-family: "IBM Plex Mono", monospace;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-line;
 }
 
+/* Negrito no texto */
+.cardsList p strong {
+  font-weight: 600;
+  color: #000;
+}
+
+/* === MODO ESCURO === */
+.dark .cardsList li {
+  background-color: #2E3033;
+  color: #fff;
+  border-left: 8px solid #888;
+}
+
+.dark .cardsList h3 {
+  color: #fff;
+}
+
+.dark .cardsList p {
+  color: #ddd;
+}
+
+.dark .cardsList p strong {
+  color: #fff;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 600px) {
+  .cardsList li {
+    margin: 1rem 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .cardsList h3 {
+    font-size: 1.1rem;
+  }
+
+  .cardsList p {
+    font-size: 0.9rem;
+  }
+}

@@ -37,12 +37,12 @@ const NavigationButtons = () => {
     { page: '/', sectionId: 'section4', label: t('nav.education') },
     { page: '/', sectionId: 'section5', label: t('nav.courses') },
     { page: '/', sectionId: 'section6', label: t('nav.portfolio') },
-    {
-      page: '/',
-      sectionId: 'section7',
-      label: t('nav.aiml'),
-      requiresAuth: true,
-    },
+    // {
+    //   page: '/',
+    //   sectionId: 'section7',
+    //   label: t('nav.aiml'),
+    //   requiresAuth: true,
+    // },
     { page: '/', sectionId: 'section8', label: 'contact' },
   ];
 

@@ -9,7 +9,6 @@ import SectionExperience from "../../../components/SectionsHome/Section3-WorkExp
 import SectionEducation from "../../../components/SectionsHome/Section4-Education/index";
 import SectionCourses from "../../../components/SectionsHome/Section5-Courses/index";
 import SectionPortfolio from "../../../components/SectionsHome/Section6-Portfolio/index";
-import SectionAiMl from "../../../components/SectionsHome/Section7-AiMl/index";
 import SectionContact from "../../../components/SectionsHome/Section8-Contact/index";
 
 import ScrollToTopButton from "../../../components/ScrollToTopButton/index";
@@ -17,8 +16,8 @@ import ScrollToTopButton from "../../../components/ScrollToTopButton/index";
 const Home = () => {
   const { t } = useTranslation();
   const location = useLocation();
-  // const { isAuthenticated } = useAuth(); // Adicione este hook
-  const isAuthenticated = true; // Temporário - trocar pela sua lógica de auth
+
+
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -47,19 +46,7 @@ const Home = () => {
         <section id="section6" className="home-section">
           <SectionPortfolio />
         </section>
-        <section id="section7" className="home-section">
-          {isAuthenticated ? (
-            <SectionAiMl />
-          ) : (
-            <div className="locked-section">
-              <h2>{t("aiml.locked.title")}</h2>
-              <p>{t("aiml.locked.message")}</p>
-              {/* <Link to="/login" className="login-button">
-                {t('aiml.locked.loginButton')}
-              </Link> */}
-            </div>
-          )}
-        </section>
+
         <section id="section6" className="home-section">
           <SectionContact />
         </section>
