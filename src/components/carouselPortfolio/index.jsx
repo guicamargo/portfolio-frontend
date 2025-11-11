@@ -26,14 +26,14 @@ const AccordionPortfolio = () => {
       title: t("sectionPortfolio.backend"),
       tags: ["#CSharp", "#.NET", "#API", "#REST", "#SQL"],
       description: t("sectionPortfolio.backendDescription"),
-      link: "https://github.com/seuusuario/backend-project",
+      link: "https://github.com/guicamargo",
     },
     {
       id: 4,
       title: t("sectionPortfolio.services"),
       tags: ["#Docker", "#AWS", "#CI/CD", "#Kubernetes", "#Linux"],
       description: t("sectionPortfolio.servicesDescription"),
-      link: "https://github.com/seuusuario/devops-services",
+      link: "https://github.com/guicamargo",
     },
   ];
 
