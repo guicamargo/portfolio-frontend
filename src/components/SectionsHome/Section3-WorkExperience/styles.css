@@ -7,6 +7,7 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   font-size: 1.25rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 *:focus {
@@ -16,11 +17,11 @@ body {
 .accordion-container {
   width: 90%;
   max-width: 100%;
-margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   justify-self: center;
-  max-height: auto;
 }
 
+/* HEADER */
 .accordion-header {
   display: flex;
   justify-content: space-between;
@@ -29,36 +30,55 @@ margin-bottom: 20px;
 
 .accordion-header h2 {
   margin: 0;
-}
-.accordion-text {
-  white-space: pre-line;
+  font-family: "Roboto Mono", monospace;
 }
 
+/* TEXTO */
+.accordion-text {
+  white-space: pre-line;
+  background-color: #fff;
+  opacity: 0.9;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0; /* remove espaçamento entre accordions */
+  font-family: "IBM Plex Mono", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .accordion-text {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  opacity: 1;
+}
+
+/* BOTÃO */
 .close-all-button {
-    font-family: "roboto mono", sans-serif !important;
+  font-family: "Roboto Mono", monospace !important;
   padding: 0.5rem 1rem;
-  margin: 1rem ;
+  margin: 1rem;
   background-color: #fff;
   color: #000;
   border: 2px solid #000;
   border-radius: 5px;
   cursor: pointer;
-  font-family: "Inter", sans-serif;
   font-weight: 500;
-
+  transition: all 0.3s ease;
 }
 
 .close-all-button:hover {
   background-color: #575757;
+  color: #fff;
 }
+
 .close-all-button:disabled {
   background-color: #fff;
   color: #000;
   cursor: not-allowed;
   border-color: #000;
 }
+
 .dark .close-all-button {
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
   border-color: #fff;
 }
@@ -66,32 +86,34 @@ margin-bottom: 20px;
 .dark .close-all-button:hover {
   background-color: #fff;
   color: #000;
-  border-color: #ffffff;
+  border-color: #fff;
 }
 
+/* DETAILS */
 details div {
-  border-left: 2px solid var(--border-color);
-  border-right: 2px solid var(--border-color);
-  border-bottom: 2px solid var(--border-color);
+  border-left: 2px solid var(--border-color, #000);
+  border-right: 2px solid var(--border-color, #000);
+  border-bottom: 2px solid var(--border-color, #000);
   padding: 1.5em;
 }
 
-details div > * + * {
-  margin-top: 1.5em;
+.dark details div {
+  border-color: #fff;
 }
 
 details + details {
-  margin-top: .5rem;
+  margin-top: 0; /* remove o espaçamento entre accordions */
 }
 
+/* SUMMARY */
 summary {
-  font-family: "roboto mono", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-size: 25px;
   font-weight: bold;
   list-style: none;
-  border: 2px solid ;
+  border: 2px solid;
   border-radius: 5px;
-  padding: .75em 1em;
+  padding: 0.75em 1em;
   cursor: pointer;
   position: relative;
   display: flex;
@@ -99,30 +121,25 @@ summary {
   gap: 1rem;
   background-color: #fff;
   color: #000;
+  transition: all 0.3s ease;
 }
+
 summary:hover {
   background-color: #cccccc;
 }
 
 .dark summary {
-  background-color: #000 ;
+  background-color: #000;
   border-color: #fff;
   color: #fff;
 }
 
 .dark summary:hover {
   background-color: #fff;
-  color: #000;  
+  color: #000;
 }
 
-summary::-webkit-details-marker {
-  display: none;
-}
-.accordion-text {
-  font-family: "IBM Plex Mono", sans-serif;
-  
-}
-
+/* ÍCONE */
 .icon-wrapper {
   display: flex;
   align-items: center;
@@ -130,26 +147,30 @@ summary::-webkit-details-marker {
   color: var(--icon-color);
 }
 
+/* SUMMARY ABERTO */
 details[open] summary {
   background-color: #ccc;
 }
+
 .dark details[open] summary {
-  background-color: #444444;
+  background-color: #333;
   color: #fff;
 }
 
-
+/* LINKS */
 a {
   color: inherit;
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 1px 0 0;
+  transition: box-shadow 0.2s ease;
 }
 
 a:hover {
   box-shadow: 0 3px 0 0;
 }
 
+/* CÓDIGO */
 code {
   font-family: monospace;
   font-weight: 600;

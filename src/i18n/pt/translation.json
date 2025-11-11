@@ -27,8 +27,8 @@
     }
   },
   "sectionAbout":{
-    "info.1": "Olá! Meu nome é Guilherme, sou formado em Engenharia de Computação pela Universidade Estadual de Ponta Grossa (UEPG) e atuo como desenvolvedor fullstack. Minha especialidade está no desenvolvimento de backends robustos utilizando C#, enquanto no frontend foco em entregar experiências dinâmicas com JavaScript e React.",
-    "info.2": "Tenho experiência no desenvolvimento de APIs e automação de processos (RPA) e atualmente estou direcionando minha carreira para áreas como, MLOps e Inteligência Artificial. Acredito que o aprendizado em Cloud Computing é essencial para essa transição e estou continuamente buscando novas formas de expandir meu conhecimento técnico e profissional."
+    "info.1": "Olá! Sou Guilherme, formado em Engenharia de Computação pela UEPG e atualmente cursando Pós-Graduação em DevOps e Arquitetura Cloud na FIAP. <br> Estou em transição estratégica de Desenvolvedor Full-Stack para DevOps/DevSecOps, combinando minha experiência em desenvolvimento de backends robustos com C#/.NET e frontends dinâmicos com React e JavaScript, com práticas modernas de Cloud, automação e infraestrutura como código.",
+    "info.2": "Minha experiência inclui desenvolvimento de APIs RESTful, automação de processos (RPA) e integração de sistemas. Acredito que a combinação de conhecimento em desenvolvimento com expertise em Cloud Computing, Kubernetes e CI/CD é fundamental para criar soluções escaláveis e eficientes. Estou constantemente expandindo minhas habilidades técnicas através de projetos práticos, certificações e contribuições para a comunidade DevOps."
   },
   "sectionExperience": {
     "AccordionCloseAll":"Fechar tudo",
@@ -63,19 +63,15 @@
   },
   "sectionPortfolio":{
     "intro": "Introdução",
-    "introDescription": "Este portfólio foi criado para apresentar minhas habilidades e projetos de maneira estruturada e interativa. \nEle está dividido em quatro seções principais: <strong>Frontend</strong>, <strong>Backend</strong>, <strong>Serviços</strong> e <strong>Inteligência Artificial</strong>, cada uma destacando tecnologias utilizadas, desafios enfrentados e soluções implementadas. \nSinta-se à vontade para explorar e conhecer mais sobre meu trabalho. Caso tenha dúvidas,  entre em contato!",
+    "introDescription": "Este portf&oacute;lio foi criado para apresentar minhas habilidades e projetos de maneira estruturada. <br> Al&eacute;m do Frontend, onde estamos agora, voc&ecirc; encontrar&aacute; outros projetos que documentam minha evolu&ccedil;&atilde;o t&eacute;cnica &mdash; desde desenvolvimento Full-Stack at&eacute; pr&aacute;ticas de DevOps e Cloud. Cada projeto destaca as tecnologias utilizadas, os desafios enfrentados e as solu&ccedil;&otilde;es implementadas. <br> Sinta-se &agrave; vontade para explorar e conhecer mais sobre meu trabalho. Caso tenha d&uacute;vidas ou queira conversar, entre em contato!",
     "frontend": "Frontend",
-    "frontendDescription": "Desenvolvido com JS, CSS e React, este front-end é a vitrine do meu trabalho. Explore meus projetos e descubra minhas capacidades, aproveitando funcionalidades como responsividade, dark mode, multi idioma, integração com APIs e autenticação (Google e interna).",
-    "backend": "Backend",
-    "backendDescription": "Esta seção concentra a API RESTful que conecta o front-end aos serviços.\n Utilizando autenticação segura via JWT e armazenamento em um banco de dados PostgreSQL, o backend garante uma comunicação eficiente e segura, incluindo integração com serviços de Machine Learning.",
-    "aieml": "AI & ML",
-    "aiemlDescription": "Esta etapa contém exemplo que demonstram a implementação de inteligência Artificial e Machine Learning. \nDesenvolvidos e expostos via API Flask, eles utilizam Bibliotecas como Pandas e NumPy para processamento de dados e Scikit-learn para treinamento e inferência. \nTudo é containerizado com Docker.",
-    "services": "Serviços",
-    "servicesDescription": "Gerencia a orquestração, banco de dados e deploy. \nO PostgreSQL e o serviço de Machine Learning rodam juntos em contêineres Docker, garantindo integração e portabilidade. \nDocker Compose facilita a orquestração, enquanto GitHub Actions automatiza CI/CD."
+    "frontendDescription": "Desenvolvido com React, JavaScript e CSS, este frontend é a vitrine do meu trabalho. Explore a interface responsiva com suporte a dark mode e multi-idioma, demonstrando atenção à experiência do usuário e boas práticas de desenvolvimento.<br><strong>Próximos passos:</strong> Implementar pipeline CI/CD completo, containerizar com Docker, deploy automatizado na nuvem (GCP/AWS) e otimização de assets com cloud storage — transformando este projeto em uma aplicação production-ready com práticas DevOps.",
+    "backend": "Backend - em desenvolvimento",
+    "backendDescription": "estou trabalhando neste projeto, logo mais trago atualizações!",
+    "services": "Serviços - em desenvolvimento",
+    "servicesDescription": "estou trabalhando neste projeto, logo mais trago atualizações!"
   },
-  "sectionAiMl":{
-    
-  },
+
   "sectionContact":{
     "notificationClipboard": "Email copiado para a área de transferência!"
     

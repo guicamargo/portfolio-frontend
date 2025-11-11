@@ -12,29 +12,32 @@ const Index = () => {
   return (
     <ConteinerSections title={t('nav.about')} className="aboutSection">
       <div className="aboutContainer">
-      <div className="imageContainer">
-      <img src={ImgPerfil} alt="Profile" className="profileImage" />
-      </div>
-      <div className='name'>
-      <div className='nameContainer'>
-        Guilherme
-      </div>
-      <div className='lastNameContainer'>
-        Correa Camargo
-      </div>
-      </div>
-      <div className="infoContainer">
-        <p className="infoText">
-          {t('sectionAbout.info.1')}
-          <br/>
-          <br/>
-          {t('sectionAbout.info.2')}
-        </p>
+        <div className="imageContainer">
+          <img src={ImgPerfil} alt="Profile" className="profileImage" />
+        </div>
+
+        <div className="name">
+          <div className="nameContainer">Guilherme</div>
+          <div className="lastNameContainer">Correa Camargo</div>
+        </div>
+
+        <div className="infoContainer">
+          <p
+            className="infoText"
+            dangerouslySetInnerHTML={{
+              __html: `
+                ${t('sectionAbout.info.1')}
+                <br><br>
+                ${t('sectionAbout.info.2')}
+              `,
+            }}
+          />
         </div>
       </div>
-        <div className="carouselContainer">
-          <CarouselSkills />
-        </div>
+
+      <div className="carouselContainer">
+        <CarouselSkills />
+      </div>
     </ConteinerSections>
   );
 };

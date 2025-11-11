@@ -1,361 +1,225 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
 
-.portfolioContainer {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto Mono", sans-serif,"IBM Plex Mono", "Montserrat" ;
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+/* === SEÇÃO PRINCIPAL === */
+.accordion-section {
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  padding: 2rem 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* === ITEM DO ACORDEÃO === */
+.accordion-item {
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .accordion-item {
+  background-color: #2e3033;
+  box-shadow: 0 0.3rem 1rem rgba(255, 255, 255, 0.08);
+}
+
+/* Linha separadora */
+.accordion-item hr {
+  border: 1px solid #ddd;
+}
+.dark .accordion-item hr {
+  border-color: #555;
+}
+
+/* === LINK / CABEÇALHO === */
+.accordion-link {
+  font-size: 1.6rem;
+  color: #111;
   width: 100%;
   display: flex;
   align-items: center;
-}
-
-.scene {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1000px;
-  height: 400px;
-  background-color: #fff;
-  overflow: hidden;
-  position: relative;
-}
-.dark .scene {
-  background: #000;
-}
-
-
-.left-zone {
-  background: #fff;
-  height: 0%;
-  flex-grow: 0;
-  display: flex;
-  width: 350px;
-  align-items: center;
-  justify-content: left;
-}
-
-.dark .left-zone {
-  background: #000;
-}
-
-.list {
-  display: flex;
-  list-style: none;
-  align-content: stretch;
-  flex-direction: column;
-  flex-grow: 1;
-  margin: 0;
-  padding: 0;
-  
-} 
-/* .list {
-  display: flex;
-  list-style: none;
-  align-content: stretch;
-  flex-direction: row; 
-  flex-grow: 1;
-  margin: 0;
-  padding: 0;
-} */
-
-.infoText {
-width: 96%;
-  }
-.infoTextDescription {
-font-size: 15px;
-}
-
-.item input[type="radio"] {
-  display: none;
-}
-
-.item input[type="radio"] ~ label {
-  display: block;
-  opacity: 0.5;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  position: relative;
-  padding-left: 70px;
-  
-}
-
-.item input[type="radio"] ~ label:hover {
-  opacity: 0.75;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  border: none;
+  outline: none;
+  text-align: left;
   cursor: pointer;
+  background: none;
+  transition: color 0.3s ease;
 }
 
-.item input[type="radio"]:checked ~ label {
-  opacity: 1;
+.dark .accordion-link {
+  color: #fff;
 }
-.item input[type="radio"]:checked ~ label.label_intro {
-  color: #35ccf2;
-  border-right: solid 4px #35ccf2;
+
+.accordion-link:hover {
+  color: #0059ff;
 }
-.item input[type="radio"]:checked ~ label.label_frontend {
-  color: #F27935;
-  border-right: solid 4px #F27935;
-  margin-left: 10px;
+
+.accordion-link h3 {
+  font-weight: 700;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
 }
-.item input[type="radio"]:checked ~ label.label_backend {
-  color: #7d3ec5;
-  border-right: solid 4px #7d3ec5;
+
+.dark .accordion-link h3 {
+  color: #fff;
 }
-.item input[type="radio"]:checked ~ label.label_aieml {
-  color: #d33797;
-  border-right: solid 4px #d33797;
+
+/* Ícone de abrir/fechar */
+.accordion-link .icon {
+  font-size: 1.8rem;
+  color: inherit;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
-.item input[type="radio"]:checked ~ label.label_services {
-  color: #368bec;
-  border-right: solid 4px #368bec;
+
+.accordion-link.active .icon {
+  transform: rotate(180deg);
 }
-.item input[type="radio"] ~ .content {
-  position: absolute;
-  left: 350px;
-  top: -400px;
-  width: 650px;
-  height: 400px;
-  animation-duration: 0.75s;
-  animation-name: slideout;
-  animation-timing-function: ease-out;
+
+/* Subtítulos (por exemplo, tecnologias) */
+.accordion-link ul {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style-type: none;
+  margin-left: 25px;
+  gap: 0.5rem;
+}
+
+.accordion-link li {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+}
+
+.dark .accordion-link li {
+  color: #ccc;
+}
+
+/* === CONTEÚDO (RESPOSTA) === */
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+.answer.open {
+  max-height: 25rem;
+}
+
+.answer p {
+  color: #333;
+  font-size: 15px;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  line-height: 1.6;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.dark .answer p {
+  color: #ddd;
+}
+
+/* === BOTÃO GITHUB === */
+.github-button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  background-color: #24292f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1rem;
+  margin: 1rem 1.5rem 1.5rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  gap: 0.5rem;
+  font-family: "DM Sans", sans-serif;
 }
 
-.item input[type="radio"]:checked ~ .content {
-  animation-duration: 0.75s;
-  animation-name: slidein;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+.github-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
 }
 
-.picto {
-  width: 100px;
-  height: 100px;
-  object-fit: contain; /* Mantém a proporção */
-}
-.dark .picto {
-  filter: invert(1);
-}
-.link {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
-  text-align: center; /* Centraliza o texto */
-}
-.middle-border {
-  background-color: #eee;
-  height: 75%;
-  flex-grow: 1;
-  max-width: 2px;
-  z-index: 0;
-}
-.dark .middle-border {
-  background: #000;
-}
-.right-zone {
-  background: #fff;
-  height: 100%;
-  flex-grow: 3;
+.github-button img {
+  width: 20px;
+  height: 20px;
 }
 
-.dark .right-zone {
-  background: #000;
-}
-@keyframes slidein {
-  0% {
-    top: -400px;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    top: 0px;
-  }
+/* === DARK MODE === */
+.dark .github-button {
+  background-color: #fafafa;
+  color: #000;
 }
 
-@keyframes slideout {
-  0% {
-    top: 0;
-    opacity: 1;
-  }
-  100% {
-    top: -400px;
-    opacity: 0;
-  }
+.dark .github-button:hover {
+  background-color: #e6e6e6;
 }
 
-/* Responsividade */
-
-@media screen and (max-width: 560px)  {
-  .right-zone {
-    min-height: 500px !important; /* Altura mínima para conteúdos pequenos */
-  }
-}
-@media screen and (max-width: 1018px) {
-
-  .item input[type="radio"] ~ label {
-    padding-left: 10px !important;
-  }
-  
-  .scene {
-    width: 100%;
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  .accordion-link {
     flex-direction: column;
-    height: auto; /* Permite expandir conforme necessário */
-    min-height: auto; /* Remove a altura mínima fixa */
-    position: relative;
-  }
-  
-  .left-zone {
-    width: 100%;
-    height: auto;
-    order: 1;
-    justify-content: center;
-    padding: 10px 0;
-    position: relative;
-    z-index: 10;
-    background: #fff;
-  }
-  
-  .dark .left-zone {
-    background: #000;
-  }
-  
-  .list {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    gap: 15px;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px;
-    scrollbar-width: thin;
-  }
-  
-  .list::-webkit-scrollbar {
-    height: 6px;
-  }
-  
-  .list::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-  }
-  
-  .list .item {
-    flex: 0 0 auto;
-  }
-  
-  .middle-border {
-    display: none;
-  }
-  
-  .right-zone {
-    width: 100%;
-    height: auto; /* Altura automática */
-    min-height: 400px; /* Altura mínima para conteúdos pequenos */
-    order: 2;
-    position: relative;
-    margin-bottom: 20px; /* Espaço no final da página */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Manter position absolute para o conteúdo, mas ajustar posição */
-  .item input[type="radio"] ~ .content {
-    position: relative; /* Muda para relative para não sair do fluxo */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    display: none;
-    box-sizing: border-box;
-    padding: 20px 15px; /* Mais espaço em volta do conteúdo */
-    margin-top: 20px; /* Espaço entre a navegação e o conteúdo */
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
-  /* Mostrar apenas o conteúdo do item selecionado */
-  .item input[type="radio"]:checked ~ .content {
-    display: flex; /* Mostra apenas o selecionado */
-    animation-name: slidein;
+  .accordion-link h3 {
+    font-size: 20px;
   }
-  
-  /* Ajustar as animações */
-  @keyframes slidein {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  .accordion-link ul {
+    margin-left: 0;
   }
-  
-  @keyframes slideout {
-    0% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(20px);
-      display: none;
-    }
+
+  .github-button {
+    margin: 1rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 14px;
   }
-  
-  /* Remover as bordas laterais */
-  .item input[type="radio"]:checked ~ label.label_intro,
-  .item input[type="radio"]:checked ~ label.label_frontend,
-  .item input[type="radio"]:checked ~ label.label_backend,
-  .item input[type="radio"]:checked ~ label.label_aieml,
-  .item input[type="radio"]:checked ~ label.label_services {
-    border-right: none;
-    /* Indicador visual alternativo */
-    border-bottom: solid 3px currentColor;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
   }
-  .infoText {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 15px; /* Adiciona um padding lateral */
-    box-sizing: border-box;
+
+  .accordion-link h3 {
+    font-size: 18px;
   }
-  
-  .infoTextDescription {
-    font-size: 15px;
-    white-space: normal; /* Garante que o texto quebre */
-    word-wrap: break-word; /* Força quebra de palavras longas */
-    overflow-wrap: break-word;
-    width: 100%;
-    max-width: 100%;
+
+  .accordion-link li {
+    font-size: 13px;
   }
-  
-  /* Garantir que o conteúdo se ajuste corretamente */
-  .item input[type="radio"] ~ .content {
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    display: none;
-    box-sizing: border-box;
-    padding: 0 10px; /* Adiciona padding para não ficar colado nas bordas */
-  }
-  
-  /* Ajuste para os parágrafos e outros elementos de texto */
-  .content p, .content h1, .content h2, .content h3, 
-  .content div, .content span {
-    max-width: 100%;
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-  
-  /* Garantir que o React.Fragment com o texto formatado quebre linha */
-  .infoTextDescription br {
-    display: block; /* Garante que as quebras de linha funcionem */
+
+  .answer p {
+    font-size: 14px;
   }
 }

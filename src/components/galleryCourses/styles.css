@@ -1,6 +1,6 @@
 .gallery-container {
   display: flex;
-  min-height: 300px;
+  min-height: 500px;
   max-height: 70vh;
   margin: 0 1rem;
   overflow: hidden;
@@ -11,7 +11,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 90%;
 }
 
@@ -19,7 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45vh;
+  width: 60vh;
   height: 100%;
   position: absolute;
   top: 0;

@@ -5,25 +5,17 @@
   box-sizing: border-box;
 }
 
-/* === CONTAINER COM SCROLL === */
 .cardsScrollContainer {
-  max-height: 40vh; /* Altura máxima da área */
-  overflow-y: auto; /* Scroll vertical */
-  overflow-x: hidden;
+  max-height: 50vh;
+  overflow-y: auto;
   padding: 1rem;
   scrollbar-width: thin;
   scrollbar-color: #888 #f0f0f0;
   scroll-behavior: smooth;
-  margin: 0 auto;
 }
 
-/* Personalização da barra de rolagem */
 .cardsScrollContainer::-webkit-scrollbar {
   width: 8px;
-}
-.cardsScrollContainer::-webkit-scrollbar-track {
-  background: #f0f0f0;
-  border-radius: 4px;
 }
 .cardsScrollContainer::-webkit-scrollbar-thumb {
   background: #888;
@@ -38,19 +30,11 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  counter-reset: list;
 }
 
 .cardsList li {
-  --stop: calc(100% / var(--length) * var(--i));
-  --l: 62%;
-  --l2: 88%;
-  --h: calc((var(--i) - 1) * (180 / var(--length)));
-  --c1: hsl(var(--h), 71%, var(--l));
-  --c2: hsl(var(--h), 71%, var(--l2));
-
   position: relative;
-  max-width: 45rem;
+  max-width: 50rem;
   margin: 2rem auto;
   padding: 2rem 1.5rem 1rem;
   box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
@@ -58,19 +42,20 @@
   background-color: white;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 8px solid var(--c1);
+  border-left: 8px solid var(--barColor, #999);
 }
 
-/* Linha colorida no topo */
+/* === BARRA DE PROGRESSO === */
 .cardsList li::before {
   content: "";
   display: block;
-  width: 100%;
+  width: var(--barProgress, 100%);
   height: 0.5rem;
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
+  background-color: var(--barColor, #999);
+  transition: width 0.6s ease, background-color 0.3s ease;
 }
 
 /* Hover */
@@ -81,7 +66,7 @@
 
 /* === TEXTOS === */
 .cardsList h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   color: #333;
   font-size: 1.3rem;
   margin-bottom: 1rem;
@@ -95,7 +80,6 @@
   white-space: pre-line;
 }
 
-/* Negrito no texto */
 .cardsList p strong {
   font-weight: 600;
   color: #000;
@@ -105,7 +89,11 @@
 .dark .cardsList li {
   background-color: #2E3033;
   color: #fff;
-  border-left: 8px solid #888;
+  border-left: 8px solid var(--barColor, #888);
+}
+
+.dark .cardsList li::before {
+  background-color: var(--barColor, #888);
 }
 
 .dark .cardsList h3 {

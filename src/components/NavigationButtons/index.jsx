@@ -43,7 +43,7 @@ const NavigationButtons = () => {
     //   label: t('nav.aiml'),
     //   requiresAuth: true,
     // },
-    { page: '/', sectionId: 'section8', label: 'contact' },
+    { page: '/', sectionId: 'section8', label: t('nav.contact') },
   ];
 
   // Handle scrolling or navigation based on authentication and current location
